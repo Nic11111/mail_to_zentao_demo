@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vst.mapper.PersistenceMapper">
+
+	<insert id="insertEmailToZentao" parameterType="com.vst.pojo.EmailToZentao">
+		INSERT INTO t_email_to_zentao(bugId, mailSubject, mailContent, emlFile, status, createTime, updateTime) 
+		VALUES(#{bugId}, #{mailSubject}, #{mailContent}, #{emlFile}, 0, NOW(), NOW());
+	</insert>
+	
+</mapper>

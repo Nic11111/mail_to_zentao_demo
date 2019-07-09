@@ -1,0 +1,796 @@
+15:41:44.926 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 14976 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+15:41:44.977 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+15:41:45.332 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@788fcafb: startup date [Wed Jul 03 15:41:45 CST 2019]; root of context hierarchy
+15:41:46.419 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+15:41:46.645 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+15:41:47.914 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+15:41:47.949 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+15:41:47.974 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:41:47.974 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+15:41:47.994 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+15:41:47.994 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+15:41:47.994 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+15:41:49.166 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+15:41:49.421 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:41:49.422 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4090 ms
+15:41:49.655 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+15:41:49.672 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15:41:49.673 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15:41:49.673 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15:41:49.673 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+15:41:49.996 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:41:50.361 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@788fcafb: startup date [Wed Jul 03 15:41:45 CST 2019]; root of context hierarchy
+15:41:50.418 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+15:41:50.420 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+15:41:50.450 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:41:50.450 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:41:51.149 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+15:41:51.151 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+15:41:51.157 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+15:41:51.166 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+15:41:51.194 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+15:41:51.368 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+15:41:51.438 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+15:41:51.452 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 8.414 seconds (JVM running for 13.021)
+15:42:07.138 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+15:42:07.138 mail-to-zentao-demo [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+15:42:07.138 mail-to-zentao-demo [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@788fcafb: startup date [Wed Jul 03 15:41:45 CST 2019]; root of context hierarchy
+15:42:07.140 mail-to-zentao-demo [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+15:42:07.141 mail-to-zentao-demo [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+15:43:23.130 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 25960 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+15:43:23.133 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+15:43:23.215 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@77d67cf3: startup date [Wed Jul 03 15:43:23 CST 2019]; root of context hierarchy
+15:43:23.650 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+15:43:23.736 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+15:43:24.324 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+15:43:24.343 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+15:43:24.352 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:43:24.353 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+15:43:24.359 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+15:43:24.360 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+15:43:24.360 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+15:43:25.423 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+15:43:25.512 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:43:25.513 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2298 ms
+15:43:25.687 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+15:43:25.693 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15:43:25.693 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15:43:25.693 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15:43:25.694 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+15:43:25.879 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:43:26.087 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@77d67cf3: startup date [Wed Jul 03 15:43:23 CST 2019]; root of context hierarchy
+15:43:26.147 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+15:43:26.148 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+15:43:26.180 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:43:26.181 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:43:26.642 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+15:43:26.644 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+15:43:26.649 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+15:43:26.661 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+15:43:26.669 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+15:43:26.781 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+15:43:26.803 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+15:43:26.808 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 4.164 seconds (JVM running for 5.194)
+15:44:00.093 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+org.springframework.web.client.RestClientException: Could not extract response: no suitable HttpMessageConverter found for response type [class java.lang.Object] and content type [text/html;charset=UTF-8]
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:119)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:725)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:680)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:435)
+	at com.vst.utils.ZentaoMethod.getZentaoID(ZentaoMethod.java:24)
+	at com.vst.service.impl.ZentaoServiceImpl.login(ZentaoServiceImpl.java:28)
+	at com.vst.task.TimerTask.createBugs(TimerTask.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+15:44:05.183 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+15:44:05.184 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@77d67cf3: startup date [Wed Jul 03 15:43:23 CST 2019]; root of context hierarchy
+15:44:05.187 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+15:44:05.187 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+15:47:39.089 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 51456 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+15:47:39.091 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+15:47:39.163 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@ae13544: startup date [Wed Jul 03 15:47:39 CST 2019]; root of context hierarchy
+15:47:39.454 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+15:47:39.534 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+15:47:40.016 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+15:47:40.031 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+15:47:40.038 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:47:40.038 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+15:47:40.041 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+15:47:40.041 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+15:47:40.041 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+15:47:41.108 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+15:47:41.187 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:47:41.187 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2024 ms
+15:47:41.301 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+15:47:41.303 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15:47:41.304 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15:47:41.304 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15:47:41.304 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+15:47:41.438 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:47:41.615 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@ae13544: startup date [Wed Jul 03 15:47:39 CST 2019]; root of context hierarchy
+15:47:41.663 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+15:47:41.664 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+15:47:41.683 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:47:41.683 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:47:42.007 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+15:47:42.008 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+15:47:42.012 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+15:47:42.020 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+15:47:42.026 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+15:47:42.036 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+15:47:42.048 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+15:47:42.051 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 3.367 seconds (JVM running for 4.223)
+15:48:08.994 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+15:48:08.995 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@ae13544: startup date [Wed Jul 03 15:47:39 CST 2019]; root of context hierarchy
+15:48:08.997 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+15:48:08.997 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+15:53:58.825 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 40888 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+15:53:58.830 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+15:53:58.916 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@52d645b1: startup date [Wed Jul 03 15:53:58 CST 2019]; root of context hierarchy
+15:53:59.234 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+15:53:59.323 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+15:53:59.931 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+15:53:59.949 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+15:53:59.960 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:53:59.960 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+15:53:59.965 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+15:53:59.965 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+15:53:59.965 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+15:54:01.034 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+15:54:01.125 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:54:01.125 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2209 ms
+15:54:01.278 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+15:54:01.283 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15:54:01.284 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15:54:01.284 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15:54:01.284 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+15:54:01.476 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:54:01.693 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@52d645b1: startup date [Wed Jul 03 15:53:58 CST 2019]; root of context hierarchy
+15:54:01.752 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+15:54:01.754 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+15:54:01.783 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:54:01.783 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:54:02.263 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+15:54:02.265 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+15:54:02.271 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+15:54:02.282 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+15:54:02.290 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+15:54:02.396 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+15:54:02.421 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+15:54:02.433 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 4.069 seconds (JVM running for 5.119)
+15:55:15.258 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+15:55:15.259 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@52d645b1: startup date [Wed Jul 03 15:53:58 CST 2019]; root of context hierarchy
+15:55:15.261 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+15:55:15.261 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+16:03:56.161 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 30984 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+16:03:56.166 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+16:03:56.259 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@129b4fe2: startup date [Wed Jul 03 16:03:56 CST 2019]; root of context hierarchy
+16:03:56.615 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+16:03:56.721 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+16:03:57.481 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+16:03:57.505 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+16:03:57.519 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:03:57.519 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:03:57.528 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+16:03:57.529 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+16:03:57.530 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+16:03:58.603 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+16:03:58.726 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:03:58.726 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2467 ms
+16:03:58.894 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+16:03:58.898 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:03:58.899 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+16:03:58.899 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+16:03:58.899 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+16:03:59.093 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:03:59.317 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@129b4fe2: startup date [Wed Jul 03 16:03:56 CST 2019]; root of context hierarchy
+16:03:59.376 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16:03:59.379 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16:03:59.410 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:03:59.410 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:03:59.945 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+16:03:59.947 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+16:03:59.952 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+16:03:59.963 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+16:03:59.972 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+16:04:00.082 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+16:04:00.098 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+16:04:00.100 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 4.439 seconds (JVM running for 5.499)
+16:05:55.479 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+16:05:55.479 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@129b4fe2: startup date [Wed Jul 03 16:03:56 CST 2019]; root of context hierarchy
+16:05:55.482 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+16:05:55.482 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+16:07:10.107 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 46188 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+16:07:10.112 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+16:07:10.195 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4c2cc639: startup date [Wed Jul 03 16:07:10 CST 2019]; root of context hierarchy
+16:07:10.525 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+16:07:10.617 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+16:07:11.263 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+16:07:11.282 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+16:07:11.293 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:07:11.293 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:07:11.299 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+16:07:11.299 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+16:07:11.299 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+16:07:12.370 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+16:07:12.459 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:07:12.459 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2264 ms
+16:07:12.619 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+16:07:12.624 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:07:12.625 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+16:07:12.625 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+16:07:12.625 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+16:07:12.817 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:07:13.033 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4c2cc639: startup date [Wed Jul 03 16:07:10 CST 2019]; root of context hierarchy
+16:07:13.092 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16:07:13.093 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16:07:13.124 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:07:13.125 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:07:13.598 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+16:07:13.600 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+16:07:13.605 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+16:07:13.614 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+16:07:13.624 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+16:07:13.734 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+16:07:13.757 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+16:07:13.764 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 4.172 seconds (JVM running for 5.251)
+16:08:59.746 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+16:08:59.746 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4c2cc639: startup date [Wed Jul 03 16:07:10 CST 2019]; root of context hierarchy
+16:08:59.749 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+16:08:59.749 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+16:33:19.298 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 34904 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+16:33:19.303 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+16:33:19.404 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@25e2a451: startup date [Wed Jul 03 16:33:19 CST 2019]; root of context hierarchy
+16:33:19.749 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+16:33:19.838 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+16:33:20.439 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+16:33:20.457 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+16:33:20.466 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:33:20.466 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:33:20.471 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+16:33:20.471 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+16:33:20.471 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+16:33:21.543 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+16:33:21.636 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:33:21.636 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2232 ms
+16:33:21.812 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+16:33:21.817 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:33:21.817 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+16:33:21.817 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+16:33:21.817 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+16:33:22.003 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:33:22.222 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@25e2a451: startup date [Wed Jul 03 16:33:19 CST 2019]; root of context hierarchy
+16:33:22.280 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16:33:22.282 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16:33:22.310 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:33:22.311 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:33:22.773 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+16:33:22.774 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+16:33:22.779 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+16:33:22.788 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+16:33:22.798 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+16:33:22.916 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+16:33:22.937 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+16:33:22.941 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 4.16 seconds (JVM running for 5.088)
+16:34:02.342 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+16:34:02.342 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@25e2a451: startup date [Wed Jul 03 16:33:19 CST 2019]; root of context hierarchy
+16:34:02.344 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+16:34:02.345 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+16:39:39.573 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 21516 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+16:39:39.578 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+16:39:39.659 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2445445a: startup date [Wed Jul 03 16:39:39 CST 2019]; root of context hierarchy
+16:39:39.974 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+16:39:40.061 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+16:39:40.678 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+16:39:40.694 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+16:39:40.706 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:39:40.706 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:39:40.711 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+16:39:40.712 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+16:39:40.712 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+16:39:41.792 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+16:39:41.887 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:39:41.888 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2228 ms
+16:39:42.048 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+16:39:42.054 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:39:42.055 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+16:39:42.055 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+16:39:42.055 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+16:39:42.272 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:39:42.488 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2445445a: startup date [Wed Jul 03 16:39:39 CST 2019]; root of context hierarchy
+16:39:42.546 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16:39:42.548 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16:39:42.586 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:39:42.586 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:39:43.061 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+16:39:43.063 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+16:39:43.069 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+16:39:43.081 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+16:39:43.091 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+16:39:43.225 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+16:39:43.250 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+16:39:43.254 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 4.139 seconds (JVM running for 5.163)
+16:40:05.447 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+16:40:05.447 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2445445a: startup date [Wed Jul 03 16:39:39 CST 2019]; root of context hierarchy
+16:40:05.450 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+16:40:05.450 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+16:51:27.553 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 31496 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+16:51:27.558 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+16:51:27.635 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2dd29a59: startup date [Wed Jul 03 16:51:27 CST 2019]; root of context hierarchy
+16:51:27.953 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+16:51:28.042 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+16:51:28.634 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+16:51:28.650 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+16:51:28.659 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:51:28.660 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:51:28.665 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+16:51:28.665 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+16:51:28.665 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+16:51:29.735 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+16:51:29.825 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:51:29.826 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2191 ms
+16:51:29.990 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+16:51:29.995 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:51:29.995 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+16:51:29.995 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+16:51:29.995 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+16:51:30.189 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:51:30.412 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2dd29a59: startup date [Wed Jul 03 16:51:27 CST 2019]; root of context hierarchy
+16:51:30.474 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16:51:30.475 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16:51:30.514 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:51:30.514 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16:51:31.140 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+16:51:31.142 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+16:51:31.147 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+16:51:31.158 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+16:51:31.165 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+16:51:31.278 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+16:51:31.297 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+16:51:31.301 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 4.244 seconds (JVM running for 5.271)
+16:52:03.253 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+16:52:03.253 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2dd29a59: startup date [Wed Jul 03 16:51:27 CST 2019]; root of context hierarchy
+16:52:03.254 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+16:52:03.255 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+17:21:04.221 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 11896 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:21:04.225 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+17:21:04.308 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@487db668: startup date [Wed Jul 03 17:21:04 CST 2019]; root of context hierarchy
+17:21:04.676 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+17:21:04.768 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+17:21:05.558 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+17:21:05.575 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+17:21:05.585 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:21:05.586 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+17:21:05.592 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+17:21:05.592 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+17:21:05.592 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+17:21:06.663 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+17:21:07.337 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:21:07.337 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3029 ms
+17:21:07.486 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:21:07.490 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:21:07.491 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:21:07.491 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:21:07.491 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:21:07.679 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:21:07.894 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@487db668: startup date [Wed Jul 03 17:21:04 CST 2019]; root of context hierarchy
+17:21:07.947 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:21:07.948 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:21:07.976 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:21:07.976 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:21:08.454 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:21:08.455 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+17:21:08.460 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+17:21:08.470 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:21:08.479 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+17:21:08.698 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:21:08.732 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+17:21:08.736 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 5.009 seconds (JVM running for 13.998)
+17:22:21.638 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:22:21.638 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@487db668: startup date [Wed Jul 03 17:21:04 CST 2019]; root of context hierarchy
+17:22:21.646 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:22:21.647 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+17:23:42.377 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 32736 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:23:42.382 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+17:23:42.462 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5066d65f: startup date [Wed Jul 03 17:23:42 CST 2019]; root of context hierarchy
+17:23:42.791 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+17:23:42.879 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+17:23:43.484 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+17:23:43.501 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+17:23:43.512 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:23:43.512 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+17:23:43.517 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+17:23:43.518 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+17:23:43.518 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+17:23:44.581 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+17:23:44.681 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:23:44.683 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2221 ms
+17:23:44.859 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:23:44.864 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:23:44.864 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:23:44.864 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:23:44.864 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:23:45.043 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:23:45.256 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5066d65f: startup date [Wed Jul 03 17:23:42 CST 2019]; root of context hierarchy
+17:23:45.311 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:23:45.312 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:23:45.345 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:23:45.345 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:23:45.807 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:23:45.810 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+17:23:45.815 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+17:23:45.825 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:23:45.835 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+17:23:45.951 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:23:45.977 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+17:23:45.979 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 4.068 seconds (JVM running for 5.09)
+17:24:26.288 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:24:26.289 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5066d65f: startup date [Wed Jul 03 17:23:42 CST 2019]; root of context hierarchy
+17:24:26.291 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:24:26.291 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+17:26:40.177 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 35444 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:26:40.183 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+17:26:40.259 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@158a3b2e: startup date [Wed Jul 03 17:26:40 CST 2019]; root of context hierarchy
+17:26:40.575 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+17:26:40.661 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+17:26:41.253 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+17:26:41.271 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+17:26:41.279 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:26:41.280 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+17:26:41.285 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+17:26:41.286 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+17:26:41.286 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+17:26:42.349 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+17:26:42.443 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:26:42.443 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2184 ms
+17:26:42.603 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:26:42.618 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:26:42.619 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:26:42.619 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:26:42.619 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:26:42.787 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:26:43.003 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@158a3b2e: startup date [Wed Jul 03 17:26:40 CST 2019]; root of context hierarchy
+17:26:43.056 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:26:43.057 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:26:43.089 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:26:43.090 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:26:43.538 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:26:43.539 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+17:26:43.543 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+17:26:43.553 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:26:43.562 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+17:26:43.670 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:26:43.711 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+17:26:43.716 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 4.004 seconds (JVM running for 4.976)
+17:27:06.922 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:27:06.922 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@158a3b2e: startup date [Wed Jul 03 17:26:40 CST 2019]; root of context hierarchy
+17:27:06.924 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:27:06.924 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+17:27:52.962 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 47596 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:27:52.967 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+17:27:53.050 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@c35172e: startup date [Wed Jul 03 17:27:53 CST 2019]; root of context hierarchy
+17:27:53.371 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+17:27:53.457 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+17:27:54.054 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+17:27:54.071 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+17:27:54.080 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:27:54.080 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+17:27:54.085 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+17:27:54.086 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+17:27:54.087 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+17:27:55.149 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+17:27:55.243 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:27:55.243 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2193 ms
+17:27:55.433 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:27:55.436 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:27:55.437 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:27:55.437 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:27:55.437 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:27:55.598 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:27:55.812 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@c35172e: startup date [Wed Jul 03 17:27:53 CST 2019]; root of context hierarchy
+17:27:55.866 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:27:55.867 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:27:55.898 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:27:55.898 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:27:56.347 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:27:56.348 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+17:27:56.355 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+17:27:56.368 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:27:56.376 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+17:27:56.487 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:27:56.509 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+17:27:56.513 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 4.035 seconds (JVM running for 5.032)
+17:28:04.841 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:28:04.842 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@c35172e: startup date [Wed Jul 03 17:27:53 CST 2019]; root of context hierarchy
+17:28:04.844 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:28:04.844 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+17:30:56.737 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 40260 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:30:56.741 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+17:30:56.828 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@58ffcbd7: startup date [Wed Jul 03 17:30:56 CST 2019]; root of context hierarchy
+17:30:57.152 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+17:30:57.240 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+17:30:57.838 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+17:30:57.856 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+17:30:57.865 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:30:57.865 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+17:30:57.872 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+17:30:57.872 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+17:30:57.873 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+17:30:58.940 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+17:30:59.049 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:30:59.050 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2222 ms
+17:30:59.228 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:30:59.234 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:30:59.235 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:30:59.235 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:30:59.235 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:30:59.405 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:30:59.619 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@58ffcbd7: startup date [Wed Jul 03 17:30:56 CST 2019]; root of context hierarchy
+17:30:59.672 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:30:59.674 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:30:59.704 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:30:59.704 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:31:00.171 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:31:00.173 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+17:31:00.177 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+17:31:00.188 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:31:00.195 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+17:31:00.301 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:31:00.320 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+17:31:00.323 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 4.076 seconds (JVM running for 5.067)
+17:32:13.119 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:32:13.120 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@58ffcbd7: startup date [Wed Jul 03 17:30:56 CST 2019]; root of context hierarchy
+17:32:13.122 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:32:13.122 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+17:32:36.366 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 47928 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:32:36.370 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+17:32:36.452 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c00384f: startup date [Wed Jul 03 17:32:36 CST 2019]; root of context hierarchy
+17:32:36.766 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+17:32:36.851 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+17:32:37.466 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+17:32:37.482 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+17:32:37.492 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:32:37.492 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+17:32:37.498 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+17:32:37.498 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+17:32:37.498 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+17:32:38.563 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+17:32:38.659 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:32:38.660 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2208 ms
+17:32:38.822 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:32:38.841 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:32:38.842 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:32:38.842 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:32:38.842 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:32:39.012 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:32:39.227 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c00384f: startup date [Wed Jul 03 17:32:36 CST 2019]; root of context hierarchy
+17:32:39.282 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:32:39.284 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:32:39.313 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:32:39.313 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:32:39.799 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:32:39.800 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+17:32:39.806 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+17:32:39.817 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:32:39.824 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+17:32:39.930 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:32:39.955 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+17:32:39.960 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 4.072 seconds (JVM running for 5.052)
+17:33:07.321 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:33:07.321 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c00384f: startup date [Wed Jul 03 17:32:36 CST 2019]; root of context hierarchy
+17:33:07.323 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:33:07.323 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+17:46:32.371 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 28260 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:46:32.376 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+17:46:32.457 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6bb2d00b: startup date [Wed Jul 03 17:46:32 CST 2019]; root of context hierarchy
+17:46:32.772 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+17:46:32.861 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+17:46:33.487 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+17:46:33.504 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+17:46:33.515 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:46:33.515 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+17:46:33.520 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+17:46:33.520 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+17:46:33.520 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+17:46:34.578 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+17:46:34.672 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:46:34.673 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2216 ms
+17:46:34.830 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:46:34.835 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:46:34.835 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:46:34.835 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:46:34.835 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:46:35.022 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:46:35.253 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6bb2d00b: startup date [Wed Jul 03 17:46:32 CST 2019]; root of context hierarchy
+17:46:35.313 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:46:35.314 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:46:35.346 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:46:35.346 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:46:35.800 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:46:35.801 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+17:46:35.809 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+17:46:35.819 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:46:35.827 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+17:46:35.939 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:46:35.962 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+17:46:35.969 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 4.056 seconds (JVM running for 5.056)
+17:46:48.274 mail-to-zentao-demo [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:46:48.274 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:46:48.274 mail-to-zentao-demo [RMI TCP Connection(5)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:46:48.275 mail-to-zentao-demo [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6bb2d00b: startup date [Wed Jul 03 17:46:32 CST 2019]; root of context hierarchy
+17:46:48.277 mail-to-zentao-demo [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:46:48.278 mail-to-zentao-demo [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+17:46:54.181 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 2440 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:46:54.187 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+17:46:54.287 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@73173f63: startup date [Wed Jul 03 17:46:54 CST 2019]; root of context hierarchy
+17:46:54.609 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+17:46:54.696 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+17:46:55.321 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+17:46:55.339 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+17:46:55.348 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:46:55.348 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+17:46:55.354 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+17:46:55.355 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+17:46:55.355 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+17:46:56.429 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+17:46:56.521 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:46:56.522 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2235 ms
+17:46:56.677 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:46:56.681 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:46:56.681 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:46:56.681 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:46:56.682 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:46:56.861 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:46:57.099 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@73173f63: startup date [Wed Jul 03 17:46:54 CST 2019]; root of context hierarchy
+17:46:57.151 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:46:57.153 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:46:57.182 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:46:57.183 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:46:57.634 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:46:57.636 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+17:46:57.641 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+17:46:57.649 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:46:57.658 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+17:46:57.766 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:46:57.789 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+17:46:57.801 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 4.115 seconds (JVM running for 5.088)
+17:47:00.035 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - start connect mail box.
+17:47:00.912 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - connected.
+17:47:00.982 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - getting messages.
+17:47:00.982 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮箱共有: 1 封邮件.
+17:47:00.989 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮箱共有: 1 封未读邮件.
+17:47:00.996 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮箱共删除: 0 封邮件.
+17:47:00.996 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - ================================================
+
+17:47:01.082 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件来自: disen.wen@victoria-tech.com
+17:47:01.082 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件主题: test
+17:47:01.084 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 发送日期: Fri Jun 28 16:01:58 CST 2019
+17:47:01.085 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件类型: multipart/alternative
+17:47:01.132 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件内容: javax.mail.internet.MimeMultipart@5c4da795
+17:47:01.132 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件作者：disen.wen@victoria-tech.com<disen.wen@victoria-tech.com>
+17:47:01.132 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - ================================================
+
+17:47:20.537 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.m.internal.mailsender.MailSender - Failed to send email:
+Email{
+	id=<2006881478.3.1562147230857@DESKTOP-3HP5354>
+	fromRecipient=Recipient{name='null', address='disen.wen@victoria-tech.com', type=null},
+	replyToRecipient=null,
+	bounceToRecipient=null,
+	text='null> test 2019028
+> 
+> 
+> 
+> disen.wen@victoria-tech.com
+',
+	textHTML='<blockquote style="color: gray; border-left: 1px solid #4f4f4f; padding-left: 1cm"><html><head><meta http-equiv="content-type" content="text/html; charset=us-ascii"><style>body { line-height: 1.5; }body { font-size: 10.5pt; font-family: 'Microsoft YaHei UI'; color: rgb(0, 0, 0); line-height: 1.5; }</style></head><body>
+<div><span></span>test 2019028</div>
+<div><br></div><hr style="width: 210px; height: 1px;" color="#b5c4df" size="1" align="left">
+<div><span><div style="MARGIN: 10px; FONT-FAMILY: verdana; FONT-SIZE: 10pt"><div>disen.wen@victoria-tech.com</div></div></span></div>
+</body></html></blockquote>',
+	subject='RE: test bugID:0',
+	recipients=[Recipient{name='disen.wen@victoria-tech.com', address='disen.wen@victoria-tech.com', type=To}],
+	headers={In-Reply-To=<201906281601576778381@victoria-tech.com>+87B10FBF875BD8A2, References=<201906281601576778381@victoria-tech.com>+87B10FBF875BD8A2}
+}
+17:47:20.541 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+org.simplejavamail.mailer.internal.mailsender.MailSenderException: Third party error
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:283)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.send(MailSender.java:211)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:239)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:230)
+	at com.vst.service.impl.MailServiceImpl.replyMail(MailServiceImpl.java:132)
+	at com.vst.task.TimerTask.workFlow(TimerTask.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.mail.smtp.SMTPSendFailedException: 501 mail from address must be same as authorization user
+
+	at com.sun.mail.smtp.SMTPTransport.issueSendCommand(SMTPTransport.java:2358)
+	at com.sun.mail.smtp.SMTPTransport.mailFrom(SMTPTransport.java:1823)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:1300)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:266)
+	... 19 common frames omitted
+Caused by: com.sun.mail.smtp.SMTPSenderFailedException: 501 mail from address must be same as authorization user
+
+	at com.sun.mail.smtp.SMTPTransport.mailFrom(SMTPTransport.java:1832)
+	... 21 common frames omitted
+17:47:20.679 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:47:20.679 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@73173f63: startup date [Wed Jul 03 17:46:54 CST 2019]; root of context hierarchy
+17:47:20.681 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:47:20.682 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+17:48:19.093 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 38872 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:48:19.098 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+17:48:19.176 mail-to-zentao-demo [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@37efd131: startup date [Wed Jul 03 17:48:19 CST 2019]; root of context hierarchy
+17:48:19.507 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+17:48:19.590 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+17:48:20.174 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 2333 (http)
+17:48:20.191 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-2333"]
+17:48:20.202 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:48:20.203 mail-to-zentao-demo [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+17:48:20.206 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+17:48:20.207 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+17:48:20.207 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+17:48:21.269 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+17:48:21.366 mail-to-zentao-demo [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:48:21.366 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2190 ms
+17:48:21.536 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:48:21.542 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:48:21.542 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:48:21.542 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:48:21.542 mail-to-zentao-demo [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:48:21.727 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:48:21.939 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@37efd131: startup date [Wed Jul 03 17:48:19 CST 2019]; root of context hierarchy
+17:48:21.994 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:48:21.994 mail-to-zentao-demo [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:48:22.026 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:48:22.026 mail-to-zentao-demo [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:48:22.483 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:48:22.484 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+17:48:22.488 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+17:48:22.499 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:48:22.506 mail-to-zentao-demo [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-2333"]
+17:48:22.617 mail-to-zentao-demo [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:48:22.646 mail-to-zentao-demo [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 2333 (http) with context path ''
+17:48:22.650 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 4.01 seconds (JVM running for 4.977)
+17:49:00.013 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - start connect mail box.
+17:49:00.832 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - connected.
+17:49:00.900 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - getting messages.
+17:49:00.900 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮箱共有: 1 封邮件.
+17:49:00.907 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮箱共有: 1 封未读邮件.
+17:49:00.911 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮箱共删除: 0 封邮件.
+17:49:00.911 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - ================================================
+
+17:49:00.975 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件来自: disen.wen@victoria-tech.com
+17:49:00.975 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件主题: test
+17:49:00.977 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 发送日期: Fri Jun 28 16:01:58 CST 2019
+17:49:00.978 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件类型: multipart/alternative
+17:49:00.989 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件内容: javax.mail.internet.MimeMultipart@51b30024
+17:49:00.990 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件作者：disen.wen@victoria-tech.com<disen.wen@victoria-tech.com>
+17:49:00.990 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - ================================================
+
+17:49:11.397 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:49:11.397 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@37efd131: startup date [Wed Jul 03 17:48:19 CST 2019]; root of context hierarchy
+17:49:11.399 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:49:11.400 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans

@@ -1,0 +1,62 @@
+09:07:20.469 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 20068 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+09:07:20.476 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+09:07:20.519 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@12bd8a64: startup date [Mon Jul 01 09:07:20 CST 2019]; root of context hierarchy
+09:07:20.830 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+09:07:20.863 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+09:07:21.531 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+09:07:21.532 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+09:07:21.537 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+09:07:21.545 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+09:07:21.556 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 1.616 seconds (JVM running for 7.007)
+09:08:00.017 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - start connect mail box.
+09:08:01.190 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - connected.
+09:08:01.271 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - getting messages.
+09:08:01.272 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮箱共有: 1 封邮件.
+09:08:01.280 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮箱共有: 1 封未读邮件.
+09:08:01.286 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮箱共删除: 0 封邮件.
+09:08:01.286 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - ================================================
+
+09:08:01.369 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件来自: disen.wen@victoria-tech.com
+09:08:01.369 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件主题: test
+09:08:01.371 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 发送日期: Fri Jun 28 16:01:58 CST 2019
+09:08:01.372 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件类型: multipart/alternative
+09:08:01.407 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件内容: javax.mail.internet.MimeMultipart@73d126c5
+09:08:01.407 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件作者：disen.wen@victoria-tech.com<disen.wen@victoria-tech.com>
+09:08:01.407 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - ================================================
+
+09:08:07.597 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - mail sent. finish.
+09:08:10.113 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+09:08:10.114 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@12bd8a64: startup date [Mon Jul 01 09:07:20 CST 2019]; root of context hierarchy
+09:08:10.120 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+09:08:10.121 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+09:26:15.851 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 1848 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+09:26:15.946 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+09:26:15.990 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3016fd5e: startup date [Mon Jul 01 09:26:15 CST 2019]; root of context hierarchy
+09:26:16.256 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+09:26:16.288 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+09:26:16.961 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+09:26:16.962 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+09:26:16.965 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+09:26:16.973 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+09:26:16.983 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 1.585 seconds (JVM running for 2.48)
+09:27:00.021 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - start connect mail box.
+09:27:03.392 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - connected.
+09:27:03.536 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - getting messages.
+09:27:03.536 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮箱共有: 1 封邮件.
+09:27:03.630 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮箱共有: 1 封未读邮件.
+09:27:03.900 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮箱共删除: 0 封邮件.
+09:27:03.900 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - ================================================
+
+09:27:04.105 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件来自: disen.wen@victoria-tech.com
+09:27:04.105 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件主题: test
+09:27:04.107 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 发送日期: Fri Jun 28 16:01:58 CST 2019
+09:27:04.108 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件类型: multipart/alternative
+09:27:04.117 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件内容: javax.mail.internet.MimeMultipart@2191cf18
+09:27:04.117 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - 邮件作者：disen.wen@victoria-tech.com<disen.wen@victoria-tech.com>
+09:27:04.117 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - ================================================
+
+09:27:11.338 mail-to-zentao-demo [pool-2-thread-1] INFO  com.vst.service.impl.MailServiceImpl - mail sent. finish.
+09:27:14.614 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+09:27:14.615 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@3016fd5e: startup date [Mon Jul 01 09:26:15 CST 2019]; root of context hierarchy
+09:27:14.616 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+09:27:14.617 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans

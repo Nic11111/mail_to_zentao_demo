@@ -1,0 +1,786 @@
+17:04:41.962 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 6180 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:04:42.021 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - No active profile set, falling back to default profiles: default
+17:04:42.133 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@60b4beb4: startup date [Thu Jun 27 17:04:42 CST 2019]; root of context hierarchy
+17:04:42.938 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+17:04:43.469 mail-to-zentao-demo [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'timerTask' defined in file [D:\workspace_2\mail-to-zentao-demo\target\classes\com\vst\task\TimerTask.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: Encountered invalid @Scheduled method 'sendMail': Could not resolve placeholder 'job.often' in value "${job.often}"
+17:04:43.498 mail-to-zentao-demo [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:04:43.622 mail-to-zentao-demo [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'timerTask' defined in file [D:\workspace_2\mail-to-zentao-demo\target\classes\com\vst\task\TimerTask.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: Encountered invalid @Scheduled method 'sendMail': Could not resolve placeholder 'job.often' in value "${job.often}"
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:589)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.vst.MailToZentaoDemoApplication.main(MailToZentaoDemoApplication.java:12)
+Caused by: java.lang.IllegalStateException: Encountered invalid @Scheduled method 'sendMail': Could not resolve placeholder 'job.often' in value "${job.often}"
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.processScheduled(ScheduledAnnotationBeanPostProcessor.java:469)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$null$1(ScheduledAnnotationBeanPostProcessor.java:333)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$postProcessAfterInitialization$2(ScheduledAnnotationBeanPostProcessor.java:333)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.postProcessAfterInitialization(ScheduledAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1712)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	... 14 common frames omitted
+17:07:28.365 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 13348 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:07:28.370 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - No active profile set, falling back to default profiles: default
+17:07:28.417 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2c78d320: startup date [Thu Jun 27 17:07:28 CST 2019]; root of context hierarchy
+17:07:28.716 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+17:07:29.013 mail-to-zentao-demo [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'timerTask' defined in file [D:\workspace_2\mail-to-zentao-demo\target\classes\com\vst\task\TimerTask.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: Encountered invalid @Scheduled method 'sendMail': Could not resolve placeholder 'job.timer' in value "${job.timer}"
+17:07:29.020 mail-to-zentao-demo [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:07:29.029 mail-to-zentao-demo [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'timerTask' defined in file [D:\workspace_2\mail-to-zentao-demo\target\classes\com\vst\task\TimerTask.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: Encountered invalid @Scheduled method 'sendMail': Could not resolve placeholder 'job.timer' in value "${job.timer}"
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:589)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.vst.MailToZentaoDemoApplication.main(MailToZentaoDemoApplication.java:12)
+Caused by: java.lang.IllegalStateException: Encountered invalid @Scheduled method 'sendMail': Could not resolve placeholder 'job.timer' in value "${job.timer}"
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.processScheduled(ScheduledAnnotationBeanPostProcessor.java:469)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$null$1(ScheduledAnnotationBeanPostProcessor.java:333)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$postProcessAfterInitialization$2(ScheduledAnnotationBeanPostProcessor.java:333)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.postProcessAfterInitialization(ScheduledAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1712)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	... 14 common frames omitted
+17:08:23.513 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 18964 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:08:23.519 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - No active profile set, falling back to default profiles: default
+17:08:23.563 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@338c99c8: startup date [Thu Jun 27 17:08:23 CST 2019]; root of context hierarchy
+17:08:23.855 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+17:08:24.132 mail-to-zentao-demo [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'timerTask' defined in file [D:\workspace_2\mail-to-zentao-demo\target\classes\com\vst\task\TimerTask.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: Encountered invalid @Scheduled method 'sendMail': Could not resolve placeholder 'job.timer' in value "${job.timer}"
+17:08:24.139 mail-to-zentao-demo [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:08:24.149 mail-to-zentao-demo [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'timerTask' defined in file [D:\workspace_2\mail-to-zentao-demo\target\classes\com\vst\task\TimerTask.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: Encountered invalid @Scheduled method 'sendMail': Could not resolve placeholder 'job.timer' in value "${job.timer}"
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:589)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.vst.MailToZentaoDemoApplication.main(MailToZentaoDemoApplication.java:12)
+Caused by: java.lang.IllegalStateException: Encountered invalid @Scheduled method 'sendMail': Could not resolve placeholder 'job.timer' in value "${job.timer}"
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.processScheduled(ScheduledAnnotationBeanPostProcessor.java:469)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$null$1(ScheduledAnnotationBeanPostProcessor.java:333)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$postProcessAfterInitialization$2(ScheduledAnnotationBeanPostProcessor.java:333)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.postProcessAfterInitialization(ScheduledAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1712)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	... 14 common frames omitted
+17:09:30.947 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 19200 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:09:30.952 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - No active profile set, falling back to default profiles: default
+17:09:30.993 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@60129b9a: startup date [Thu Jun 27 17:09:30 CST 2019]; root of context hierarchy
+17:09:31.279 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+17:09:31.621 mail-to-zentao-demo [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+17:09:31.667 mail-to-zentao-demo [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:09:31.675 mail-to-zentao-demo [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+17:10:53.406 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 13212 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:10:53.412 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - No active profile set, falling back to default profiles: default
+17:10:53.455 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@70f02c32: startup date [Thu Jun 27 17:10:53 CST 2019]; root of context hierarchy
+17:10:53.793 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+17:10:54.104 mail-to-zentao-demo [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+17:10:54.150 mail-to-zentao-demo [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:10:54.159 mail-to-zentao-demo [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+17:14:36.074 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 20140 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:14:36.077 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - No active profile set, falling back to default profiles: default
+17:14:36.114 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4386f16: startup date [Thu Jun 27 17:14:36 CST 2019]; root of context hierarchy
+17:14:36.463 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+17:14:36.727 mail-to-zentao-demo [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+17:14:36.733 mail-to-zentao-demo [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:14:36.773 mail-to-zentao-demo [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+17:15:07.699 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 2864 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:15:07.705 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - No active profile set, falling back to default profiles: default
+17:15:07.747 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@27216cd: startup date [Thu Jun 27 17:15:07 CST 2019]; root of context hierarchy
+17:15:08.435 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:15:08.449 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:15:08.472 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 1.159 seconds (JVM running for 2.624)
+17:16:25.825 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.m.internal.mailsender.MailSender - Failed to send email:
+Email{
+	id=<436685172.3.1561626964758@DESKTOP-3HP5354>
+	fromRecipient=Recipient{name='test email box', address='714413099@qq.com', type=null},
+	replyToRecipient=null,
+	bounceToRecipient=null,
+	text='testcontent20190627',
+	textHTML='null',
+	subject='test20190627',
+	recipients=[Recipient{name='test recieve', address='714413099@qq.com', type=To}]
+}
+17:16:25.828 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+org.simplejavamail.mailer.internal.mailsender.MailSenderException: Third party error
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:283)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.send(MailSender.java:211)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:239)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:230)
+	at com.vst.task.TimerTask.sendMail(TimerTask.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.qq.com, 995; timeout -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2209)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:740)
+	at javax.mail.Service.connect(Service.java:388)
+	at javax.mail.Service.connect(Service.java:246)
+	at javax.mail.Service.connect(Service.java:195)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:265)
+	... 18 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:353)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:239)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2175)
+	... 23 common frames omitted
+17:17:25.555 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.m.internal.mailsender.MailSender - Failed to send email:
+Email{
+	id=<1000806379.7.1561627024551@DESKTOP-3HP5354>
+	fromRecipient=Recipient{name='test email box', address='714413099@qq.com', type=null},
+	replyToRecipient=null,
+	bounceToRecipient=null,
+	text='testcontent20190627',
+	textHTML='null',
+	subject='test20190627',
+	recipients=[Recipient{name='test recieve', address='714413099@qq.com', type=To}]
+}
+17:17:25.556 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+org.simplejavamail.mailer.internal.mailsender.MailSenderException: Third party error
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:283)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.send(MailSender.java:211)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:239)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:230)
+	at com.vst.task.TimerTask.sendMail(TimerTask.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.qq.com, 995; timeout -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2209)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:740)
+	at javax.mail.Service.connect(Service.java:388)
+	at javax.mail.Service.connect(Service.java:246)
+	at javax.mail.Service.connect(Service.java:195)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:265)
+	... 18 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:353)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:239)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2175)
+	... 23 common frames omitted
+17:18:25.570 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.m.internal.mailsender.MailSender - Failed to send email:
+Email{
+	id=<46620713.11.1561627084567@DESKTOP-3HP5354>
+	fromRecipient=Recipient{name='test email box', address='714413099@qq.com', type=null},
+	replyToRecipient=null,
+	bounceToRecipient=null,
+	text='testcontent20190627',
+	textHTML='null',
+	subject='test20190627',
+	recipients=[Recipient{name='test recieve', address='714413099@qq.com', type=To}]
+}
+17:18:25.571 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+org.simplejavamail.mailer.internal.mailsender.MailSenderException: Third party error
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:283)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.send(MailSender.java:211)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:239)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:230)
+	at com.vst.task.TimerTask.sendMail(TimerTask.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.qq.com, 995; timeout -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2209)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:740)
+	at javax.mail.Service.connect(Service.java:388)
+	at javax.mail.Service.connect(Service.java:246)
+	at javax.mail.Service.connect(Service.java:195)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:265)
+	... 18 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:353)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:239)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2175)
+	... 23 common frames omitted
+17:18:26.408 mail-to-zentao-demo [RMI TCP Connection(13)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:18:26.409 mail-to-zentao-demo [RMI TCP Connection(13)-127.0.0.1] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@27216cd: startup date [Thu Jun 27 17:15:07 CST 2019]; root of context hierarchy
+17:18:26.412 mail-to-zentao-demo [RMI TCP Connection(13)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:18:32.777 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 24084 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:18:32.785 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+17:18:32.829 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@58be6e8: startup date [Thu Jun 27 17:18:32 CST 2019]; root of context hierarchy
+17:18:33.409 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:18:33.418 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:18:33.429 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 1.083 seconds (JVM running for 2.06)
+17:20:04.758 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.m.internal.mailsender.MailSender - Failed to send email:
+Email{
+	id=<1025429978.3.1561627144645@DESKTOP-3HP5354>
+	fromRecipient=Recipient{name='test email box', address='714413099@qq.com', type=null},
+	replyToRecipient=null,
+	bounceToRecipient=null,
+	text='testcontent20190627',
+	textHTML='null',
+	subject='test20190627',
+	recipients=[Recipient{name='test recieve', address='714413099@qq.com', type=To}]
+}
+17:20:04.761 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+org.simplejavamail.mailer.internal.mailsender.MailSenderException: Third party error
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:283)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.send(MailSender.java:211)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:239)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:230)
+	at com.vst.task.TimerTask.sendMail(TimerTask.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.mail.MessagingException: Could not connect to SMTP host: smtp.qq.com, port: 465, response: -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2197)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:740)
+	at javax.mail.Service.connect(Service.java:388)
+	at javax.mail.Service.connect(Service.java:246)
+	at javax.mail.Service.connect(Service.java:195)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:265)
+	... 18 common frames omitted
+17:21:08.454 mail-to-zentao-demo [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:21:08.455 mail-to-zentao-demo [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@58be6e8: startup date [Thu Jun 27 17:18:32 CST 2019]; root of context hierarchy
+17:21:08.457 mail-to-zentao-demo [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:24:58.971 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 21412 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:24:58.977 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+17:24:59.020 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@13330ac6: startup date [Thu Jun 27 17:24:59 CST 2019]; root of context hierarchy
+17:24:59.642 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:24:59.652 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:24:59.664 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 1.103 seconds (JVM running for 2.105)
+17:26:04.904 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.m.internal.mailsender.MailSender - Failed to send email:
+Email{
+	id=<656981384.3.1561627504724@DESKTOP-3HP5354>
+	fromRecipient=Recipient{name='test email box', address='714413099@qq.com', type=null},
+	replyToRecipient=null,
+	bounceToRecipient=null,
+	text='testcontent20190627',
+	textHTML='null',
+	subject='test20190627',
+	recipients=[Recipient{name='test recieve', address='714413099@qq.com', type=To}]
+}
+17:26:04.910 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+org.simplejavamail.mailer.internal.mailsender.MailSenderException: Third party error
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:283)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.send(MailSender.java:211)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:239)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:230)
+	at com.vst.task.TimerTask.sendMail(TimerTask.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.mail.MessagingException: Could not connect to SMTP host: smtp.qq.com, port: 465, response: -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2197)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:740)
+	at javax.mail.Service.connect(Service.java:388)
+	at javax.mail.Service.connect(Service.java:246)
+	at javax.mail.Service.connect(Service.java:195)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:265)
+	... 18 common frames omitted
+17:26:48.578 mail-to-zentao-demo [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:26:48.579 mail-to-zentao-demo [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@13330ac6: startup date [Thu Jun 27 17:24:59 CST 2019]; root of context hierarchy
+17:26:48.582 mail-to-zentao-demo [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:31:54.417 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 22084 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:31:54.423 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+17:31:54.466 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3f9342d4: startup date [Thu Jun 27 17:31:54 CST 2019]; root of context hierarchy
+17:31:55.098 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:31:55.107 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:31:55.118 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 1.148 seconds (JVM running for 2.091)
+17:33:04.677 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.m.internal.mailsender.MailSender - Failed to send email:
+Email{
+	id=<1288561887.3.1561627924646@DESKTOP-3HP5354>
+	fromRecipient=Recipient{name='test email box', address='714413099@qq.com', type=null},
+	replyToRecipient=null,
+	bounceToRecipient=null,
+	text='testcontent20190627',
+	textHTML='null',
+	subject='test20190627',
+	recipients=[Recipient{name='test recieve', address='714413099@qq.com', type=To}]
+}
+17:33:04.680 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+org.simplejavamail.mailer.internal.mailsender.MailSenderException: Third party error
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:283)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.send(MailSender.java:211)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:239)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:230)
+	at com.vst.task.TimerTask.sendMail(TimerTask.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.mail.MessagingException: Could not connect to SMTP host: smtp.qq.com, port: 465, response: -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2197)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:740)
+	at javax.mail.Service.connect(Service.java:388)
+	at javax.mail.Service.connect(Service.java:246)
+	at javax.mail.Service.connect(Service.java:195)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:265)
+	... 18 common frames omitted
+17:35:04.614 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.m.internal.mailsender.MailSender - Failed to send email:
+Email{
+	id=<2062936285.7.1561628044526@DESKTOP-3HP5354>
+	fromRecipient=Recipient{name='test email box', address='714413099@qq.com', type=null},
+	replyToRecipient=null,
+	bounceToRecipient=null,
+	text='testcontent20190627',
+	textHTML='null',
+	subject='test20190627',
+	recipients=[Recipient{name='test recieve', address='714413099@qq.com', type=To}]
+}
+17:35:04.614 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+org.simplejavamail.mailer.internal.mailsender.MailSenderException: Third party error
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:283)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.send(MailSender.java:211)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:239)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:230)
+	at com.vst.task.TimerTask.sendMail(TimerTask.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.mail.MessagingException: Could not connect to SMTP host: smtp.qq.com, port: 465, response: -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2197)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:740)
+	at javax.mail.Service.connect(Service.java:388)
+	at javax.mail.Service.connect(Service.java:246)
+	at javax.mail.Service.connect(Service.java:195)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:265)
+	... 18 common frames omitted
+17:36:40.138 mail-to-zentao-demo [RMI TCP Connection(13)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:36:40.138 mail-to-zentao-demo [RMI TCP Connection(13)-127.0.0.1] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@3f9342d4: startup date [Thu Jun 27 17:31:54 CST 2019]; root of context hierarchy
+17:36:40.141 mail-to-zentao-demo [RMI TCP Connection(13)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:36:55.582 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 13688 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:36:55.588 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+17:36:55.631 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@65a15628: startup date [Thu Jun 27 17:36:55 CST 2019]; root of context hierarchy
+17:36:56.212 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:36:56.220 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:36:56.232 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 1.087 seconds (JVM running for 2.001)
+17:40:14.508 mail-to-zentao-demo [RMI TCP Connection(12)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:40:14.509 mail-to-zentao-demo [RMI TCP Connection(12)-127.0.0.1] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@65a15628: startup date [Thu Jun 27 17:36:55 CST 2019]; root of context hierarchy
+17:40:14.511 mail-to-zentao-demo [RMI TCP Connection(12)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:40:24.876 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 16092 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:40:24.880 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+17:40:24.921 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@e70f13a: startup date [Thu Jun 27 17:40:24 CST 2019]; root of context hierarchy
+17:40:25.513 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:40:25.524 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:40:25.535 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 1.08 seconds (JVM running for 1.973)
+17:42:04.667 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.m.internal.mailsender.MailSender - Failed to send email:
+Email{
+	id=<530159711.3.1561628464646@DESKTOP-3HP5354>
+	fromRecipient=Recipient{name='test email box', address='714413099@qq.com', type=null},
+	replyToRecipient=null,
+	bounceToRecipient=null,
+	text='testcontent20190627',
+	textHTML='null',
+	subject='test20190627',
+	recipients=[Recipient{name='test recieve', address='714413099@qq.com', type=To}]
+}
+17:42:04.670 mail-to-zentao-demo [pool-2-thread-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+org.simplejavamail.mailer.internal.mailsender.MailSenderException: Third party error
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:283)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.send(MailSender.java:211)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:239)
+	at org.simplejavamail.mailer.Mailer.sendMail(Mailer.java:230)
+	at com.vst.task.TimerTask.sendMail(TimerTask.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.mail.MessagingException: Could not connect to SMTP host: smtp.qq.com, port: 465, response: -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2197)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:740)
+	at javax.mail.Service.connect(Service.java:388)
+	at javax.mail.Service.connect(Service.java:246)
+	at javax.mail.Service.connect(Service.java:195)
+	at org.simplejavamail.mailer.internal.mailsender.MailSender.sendMailClosure(MailSender.java:265)
+	... 18 common frames omitted
+17:42:29.350 mail-to-zentao-demo [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:42:29.351 mail-to-zentao-demo [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@e70f13a: startup date [Thu Jun 27 17:40:24 CST 2019]; root of context hierarchy
+17:42:29.355 mail-to-zentao-demo [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:42:49.678 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 23852 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+17:42:49.684 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+17:42:49.730 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3b96c42e: startup date [Thu Jun 27 17:42:49 CST 2019]; root of context hierarchy
+17:42:50.341 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:42:50.352 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:42:50.363 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 1.147 seconds (JVM running for 2.044)
+17:44:09.578 mail-to-zentao-demo [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:44:09.579 mail-to-zentao-demo [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@3b96c42e: startup date [Thu Jun 27 17:42:49 CST 2019]; root of context hierarchy
+17:44:09.581 mail-to-zentao-demo [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+18:04:14.004 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 20740 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+18:04:14.010 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+18:04:14.059 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@68d279ec: startup date [Thu Jun 27 18:04:14 CST 2019]; root of context hierarchy
+18:04:14.314 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+18:04:14.348 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+18:04:14.704 mail-to-zentao-demo [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+18:04:14.713 mail-to-zentao-demo [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18:04:14.718 mail-to-zentao-demo [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+18:06:02.583 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 21296 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+18:06:02.589 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+18:06:02.633 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3cdf2c61: startup date [Thu Jun 27 18:06:02 CST 2019]; root of context hierarchy
+18:06:02.888 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+18:06:02.921 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+18:06:03.279 mail-to-zentao-demo [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+18:06:03.285 mail-to-zentao-demo [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18:06:03.292 mail-to-zentao-demo [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+18:06:52.144 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 24076 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+18:06:52.150 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+18:06:52.198 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@77258e59: startup date [Thu Jun 27 18:06:52 CST 2019]; root of context hierarchy
+18:06:52.457 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+18:06:52.492 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+18:06:52.947 mail-to-zentao-demo [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Generic.class]: Unsatisfied dependency expressed through method 'dataSource' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties': Could not bind properties to 'DataSourceProperties' : prefix=spring.datasource, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.datasource.type' to java.lang.Class<javax.sql.DataSource>
+18:06:52.954 mail-to-zentao-demo [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18:06:52.957 mail-to-zentao-demo [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.datasource.type' to java.lang.Class<javax.sql.DataSource>:
+
+    Property: spring.datasource.type
+    Value: com.alibaba.druid.pool.DruidDataSource
+    Origin: class path resource [application.yml]:14:13
+    Reason: No converter found capable of converting from type [java.lang.String] to type [java.lang.Class<javax.sql.DataSource>]
+
+Action:
+
+Update your application's configuration
+
+18:07:57.015 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 22380 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+18:07:57.021 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+18:07:57.071 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@301ec38b: startup date [Thu Jun 27 18:07:57 CST 2019]; root of context hierarchy
+18:07:57.324 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+18:07:57.356 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+18:07:57.712 mail-to-zentao-demo [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
+18:07:57.719 mail-to-zentao-demo [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18:07:57.730 mail-to-zentao-demo [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:590)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1256)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1105)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.vst.MailToZentaoDemoApplication.main(MailToZentaoDemoApplication.java:16)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582)
+	... 17 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
+	at org.springframework.util.Assert.state(Assert.java:94)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:224)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.initializeDataSourceBuilder(DataSourceProperties.java:176)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:43)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:81)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 18 common frames omitted
+18:14:57.216 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 22316 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+18:14:57.222 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+18:14:57.272 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@17aad511: startup date [Thu Jun 27 18:14:57 CST 2019]; root of context hierarchy
+18:14:57.537 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+18:14:57.571 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+18:14:58.000 mail-to-zentao-demo [main] ERROR com.zaxxer.hikari.HikariConfig - Failed to load driver class com.mysql.jdbc.Driver from HikariConfig class classloader sun.misc.Launcher$AppClassLoader@18b4aac2
+18:14:58.002 mail-to-zentao-demo [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under '' to com.zaxxer.hikari.HikariDataSource
+18:14:58.011 mail-to-zentao-demo [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18:14:58.014 mail-to-zentao-demo [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under '' to com.zaxxer.hikari.HikariDataSource:
+
+    Property: driverclassname
+    Value: com.mysql.jdbc.Driver
+    Origin: "driverClassName" from property source "source"
+    Reason: Failed to load driver class com.mysql.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+
+Action:
+
+Update your application's configuration
+
+18:17:29.565 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Starting MailToZentaoDemoApplication on DESKTOP-3HP5354 with PID 24156 (D:\workspace_2\mail-to-zentao-demo\target\classes started by V in D:\workspace_2\mail-to-zentao-demo)
+18:17:29.573 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - The following profiles are active: application-dev.yml
+18:17:29.623 mail-to-zentao-demo [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@22295ec4: startup date [Thu Jun 27 18:17:29 CST 2019]; root of context hierarchy
+18:17:29.889 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst.mapper]' package. Please check your configuration.
+18:17:29.924 mail-to-zentao-demo [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.vst]' package. Please check your configuration.
+18:17:30.734 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+18:17:30.735 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+18:17:30.738 mail-to-zentao-demo [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+18:17:30.745 mail-to-zentao-demo [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+18:17:30.755 mail-to-zentao-demo [main] INFO  com.vst.MailToZentaoDemoApplication - Started MailToZentaoDemoApplication in 1.665 seconds (JVM running for 2.565)
+18:17:40.773 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+18:17:40.773 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@22295ec4: startup date [Thu Jun 27 18:17:29 CST 2019]; root of context hierarchy
+18:17:40.775 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+18:17:40.777 mail-to-zentao-demo [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
