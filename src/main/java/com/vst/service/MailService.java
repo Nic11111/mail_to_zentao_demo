@@ -6,7 +6,6 @@ import javax.mail.Message;
 
 public interface MailService {
 
-	public int sendMail();
 	public List<Message> getMail();
 	public int replyMail(Message message, String bugID) throws Exception;
 }

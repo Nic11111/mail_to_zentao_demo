@@ -15,20 +15,17 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.springframework.stereotype.Component;
 
-import com.vst.constant.ZentaoParam;
-
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 @Component
 public class ZentaoMethod {
 	
-	public String getZentaoID() {
+	public String getZentaoID(String sessionIdUrl) {
 		
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		try {
-			HttpGet httpGet = new HttpGet(
-					ZentaoParam.ZENTAO_URL + ZentaoParam.ZENTAO_SESSION_ID_PATH);
+			HttpGet httpGet = new HttpGet(sessionIdUrl);
 			httpGet.setHeader("Accept",
 					"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8");
 			httpGet.setHeader("Accept-Encoding", "gzip, deflate");
@@ -55,7 +52,7 @@ public class ZentaoMethod {
 	}
 	
 	
-	public void zentaoLogin(String username, String password, String zentaoID) throws Exception {
+	public void zentaoLogin(String loginUrl, String username, String password, String zentaoID) throws Exception {
 		
 		if (username.isEmpty() || password.isEmpty() || zentaoID.isEmpty()) {
 			throw new Exception("请检查禅道登录参数");
@@ -63,8 +60,7 @@ public class ZentaoMethod {
 
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		try {
-			HttpPost httpPost = new HttpPost(
-					ZentaoParam.ZENTAO_URL + ZentaoParam.ZENTAO_LOGIN_PATH);
+			HttpPost httpPost = new HttpPost(loginUrl);
 
 			httpPost.setHeader("Accept", "application/json, text/javascript, */*; q=0.01");
 			httpPost.setHeader("Accept-Encoding", "gzip, deflate");
@@ -73,7 +69,7 @@ public class ZentaoMethod {
 			httpPost.setHeader("Cookie",
 					"ang=zh-cn; theme=default; windowWidth=1920; windowHeight=974; zentaosid=" + zentaoID);
 
-			String postBody = "account=" + username + "&password=" + password + "&referer=" + ZentaoParam.ZENTAO_REFER_TO;
+			String postBody = "account=" + username + "&password=" + password;
 			StringEntity postEntity = new StringEntity(postBody, "UTF-8");
 			httpPost.setEntity(postEntity);
 
@@ -94,12 +90,11 @@ public class ZentaoMethod {
 	}
 	
 	
-	public int createBug(Message message, String zentaoID) {
+	public int createBug(String createBugUrl, Message message, String zentaoID) {
 		
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		try {
-			HttpPost httpPost = new HttpPost(
-					ZentaoParam.ZENTAO_URL + ZentaoParam.ZENTAO_BUG_CREATE_PATH);
+			HttpPost httpPost = new HttpPost(createBugUrl);
 
 			httpPost.setHeader("Accept", "application/json, text/javascript, */*; q=0.01");
 			httpPost.setHeader("Accept-Encoding", "gzip, deflate");
@@ -134,11 +129,10 @@ public class ZentaoMethod {
 		return 0;
 	}
 	
-	public int getBugID(String subject, String zentaoID) {
+	public int getBugID(String browseBugUrl, String subject, String zentaoID) {
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		try {
-			HttpGet httpGet = new HttpGet(
-					ZentaoParam.ZENTAO_URL + ZentaoParam.ZENTAO_BUG_BROWSE_PATH);
+			HttpGet httpGet = new HttpGet(browseBugUrl);
 
 			httpGet.setHeader("Accept", "application/json, text/javascript, */*; q=0.01");
 			httpGet.setHeader("Accept-Encoding", "gzip, deflate");

@@ -100,17 +100,32 @@ mybatis:
   not-empty: false
   identity: MYSQL
   
-####邮箱配置
-#mailconfig:
-#  smtp_server: smtp.qq.com
-#  smtp_port: 465 #587
-#  imap_server: imap.qq.com
-#  imap_port: 993
-#  pop_server: pop.qq.com
-#  pop_port: 995
-#  mailbox: 714413099@qq.com
-#  pop_password: aanfoofqvrwtbcea
-#  imap_password: sqwjwocdyxfwbeah
+  
+##zentao_config
+zentao:
+  url: http://192.168.2.20:80
+  account: admin
+  password: 123QWEasd
+  session_id_path: /pro/api-getSessionID.json
+  refer_to: /pro/my/
+  exec_method_path: /pro/api-getModel-%d-%d-%d.json
+  login_path: /pro/user-login.json?
+  logout_path: /pro/user-logout.json
+  bug_browse_path: /pro/bug-browse-1.json
+  bug_create_path: /pro/bug-create-1-0-moduleID=0.json?
+  
+  
+###mail_config
+mail:
+  smtp_server: smtp.qq.com
+  smtp_port: 587 #465
+  imap_server: imap.qq.com
+  imap_port: 993
+  pop_server: pop.qq.com
+  pop_port: 995
+  mailbox: 714413099@qq.com
+  pop_password: aanfoofqvrwtbcea
+  imap_password: sqwjwocdyxfwbeah
   
 job: 
   timer: 
