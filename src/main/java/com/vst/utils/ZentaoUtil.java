@@ -10,39 +10,39 @@ import org.springframework.stereotype.Component;
 public class ZentaoUtil {
 
 	@Value("${zentao.url}")
-	public static String ZENTAO_URL;
+	public String ZENTAO_URL;
 	
 	@Value("${zentao.account}")
-	public static String ZENTAO_ACCOUNT;
+	public String ZENTAO_ACCOUNT;
 	
 	@Value("${zentao.password}")
-	public static String ZENTAO_PASSWORD;
+	public String ZENTAO_PASSWORD;
 	
 	@Value("${zentao.session_id_path}")
-	public static String ZENTAO_SESSION_ID_PATH;
+	public String ZENTAO_SESSION_ID_PATH;
 	
 	@Value("${zentao.refer_to}")
-	public static String ZENTAO_REFER_TO;
+	public String ZENTAO_REFER_TO;
 	
 	@Value("${zentao.exec_method_path}")
-	public static String ZENTAO_EXEC_METHOD_PATH;
+	public String ZENTAO_EXEC_METHOD_PATH;
 	
 	@Value("${zentao.login_path}")
-	public static String ZENTAO_LOGIN_PATH;
+	public String ZENTAO_LOGIN_PATH;
 	
 	@Value("${zentao.logout_path}")
-	public static String ZENTAO_LOGOUT_PATH;
+	public String ZENTAO_LOGOUT_PATH;
 	
 	@Value("${zentao.bug_browse_path}")
-	public static String ZENTAO_BUG_BROWSE_PATH;
+	public String ZENTAO_BUG_BROWSE_PATH;
 	
 	@Value("${zentao.bug_create_path}")
-	public static String ZENTAO_BUG_CREATE_PATH;
+	public String ZENTAO_BUG_CREATE_PATH;
 	
 	@Autowired
-	private static ZentaoMethod zentaoMethod;
+	private ZentaoMethod zentaoMethod;
 	
-	public static int createBug(Message message) throws Exception {
+	public int createBug(Message message) throws Exception {
 		String sessionIdUrl = ZENTAO_URL + ZENTAO_SESSION_ID_PATH;
 		String zentaoID = zentaoMethod.getZentaoID(sessionIdUrl);
 		

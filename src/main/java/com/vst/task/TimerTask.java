@@ -33,21 +33,19 @@ public class TimerTask {
 		
 		for (Message msg : messagesToSave) {
 			
-			
-//			int bugID = zentaoService.createBug(msg);
-//			persistenceService.storeMail(msg, bugID);
-//			String fromMail = "";
-//			if (msg.getFrom() != null && msg.getFrom()[0] != null) {
-//				if(msg.getFrom()[0].toString().contains("<")) {
-//					fromMail = msg.getFrom()[0].toString().substring(
-//							msg.getFrom()[0].toString().lastIndexOf("<")+1, msg.getFrom()[0].toString().lastIndexOf(">"));
-//				} else {
-//					fromMail = msg.getFrom()[0].toString();
-//				}
-//			}
+			int bugID = zentaoService.createBug(msg);
+			persistenceService.storeMail(msg, bugID);
+			String fromMail = "";
+			if (msg.getFrom() != null && msg.getFrom()[0] != null) {
+				if(msg.getFrom()[0].toString().contains("<")) {
+					fromMail = msg.getFrom()[0].toString().substring(
+							msg.getFrom()[0].toString().lastIndexOf("<")+1, msg.getFrom()[0].toString().lastIndexOf(">"));
+				} else {
+					fromMail = msg.getFrom()[0].toString();
+				}
+			}
 //			mailService.replyMail(msg, String.valueOf(21));
 		}
-		
 	}
 	
 	public int createBugs() throws Exception {

@@ -22,28 +22,28 @@ import org.springframework.stereotype.Component;
 public class MailUtil {
 
 	@Value("${mail.pop_server}")
-	private static String POP_SERVER;
+	private String POP_SERVER;
 	
 	@Value("${mail.smtp_server}")
-	private static String SMTP_SERVER;
+	private String SMTP_SERVER;
 	
 	@Value("${mail.mailbox}")
-	private static String EMAIL_ADDRESS;
+	private String EMAIL_ADDRESS;
 	
 	@Value("${mail.pop_password}")
-	private static String POP_PASSWORD;
+	private String POP_PASSWORD;
 	
 	@Value("${mail.pop_port}")
-	private static int POP_PORT;
+	private int POP_PORT;
 	
 	@Value("${mail.smtp_port}")
-	private static int SMTP_PORT;
+	private int SMTP_PORT;
 	
 	@Value("${period}")
-	private static int PERIOD;
+	private int PERIOD;
 	
 	
-	public static List<Message> getMail() {
+	public List<Message> getMail() {
 		
 		Properties props = new Properties();
 		props.setProperty("mail.pop3.host", POP_SERVER);
@@ -81,7 +81,7 @@ public class MailUtil {
 		return null;
 	}
 	
-	public static int replyMail(Message message, String bugID) throws Exception {
+	public int replyMail(Message message, String bugID) throws Exception {
 		MimeMessage mms = (MimeMessage)message;
 		Email email = EmailBuilder.replyingTo(mms)
 				.from(EMAIL_ADDRESS)
