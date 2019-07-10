@@ -1,60 +1,105 @@
 package com.vst.utils;
 
-import javax.mail.Message;
+import javax.mail.internet.MimeMessage;
 
+import org.simplejavamail.converter.EmailConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
+import net.sf.json.JSONObject;
 
 @Component
 public class ZentaoUtil {
 
 	@Value("${zentao.url}")
-	public String ZENTAO_URL;
+	private String ZENTAO_URL;
 	
 	@Value("${zentao.account}")
-	public String ZENTAO_ACCOUNT;
+	private String ACCOUNT;
 	
 	@Value("${zentao.password}")
-	public String ZENTAO_PASSWORD;
+	private String PASSWORD;
 	
-	@Value("${zentao.session_id_path}")
-	public String ZENTAO_SESSION_ID_PATH;
+	@Value("${zentao.session_id}")
+	private String SESSION_ID;
 	
 	@Value("${zentao.refer_to}")
-	public String ZENTAO_REFER_TO;
+	private String REFER_TO;
 	
-	@Value("${zentao.exec_method_path}")
-	public String ZENTAO_EXEC_METHOD_PATH;
+	@Value("${zentao.exec_method}")
+	private String EXEC_METHOD;
 	
-	@Value("${zentao.login_path}")
-	public String ZENTAO_LOGIN_PATH;
+	@Value("${zentao.login}")
+	private String LOGIN;
 	
-	@Value("${zentao.logout_path}")
-	public String ZENTAO_LOGOUT_PATH;
+	@Value("${zentao.logout}")
+	private String LOGOUT;
 	
-	@Value("${zentao.bug_browse_path}")
-	public String ZENTAO_BUG_BROWSE_PATH;
+	@Value("${zentao.bug_view}")
+	private String BUG_VIEW;
 	
-	@Value("${zentao.bug_create_path}")
-	public String ZENTAO_BUG_CREATE_PATH;
+	@Value("${zentao.bug_browse}")
+	private String BUG_BROWSE;
+	
+	@Value("${zentao.bug_create}")
+	private String BUG_CREATE;
+	
+	@Value("${zentao.bug_edit}")
+	private String BUG_EDIT;
 	
 	@Autowired
 	private ZentaoMethod zentaoMethod;
 	
-	public int createBug(Message message) throws Exception {
-		String sessionIdUrl = ZENTAO_URL + ZENTAO_SESSION_ID_PATH;
-		String zentaoID = zentaoMethod.getZentaoID(sessionIdUrl);
+	private String zentaoID;
+	
+	
+	public int createBug(/*Message message*/int productId, int openedBuildId, String subject, String eml, String from, String to) throws Exception {
 		
-		String loginUrl = ZENTAO_URL + ZENTAO_LOGIN_PATH;
-		zentaoMethod.zentaoLogin(loginUrl, ZENTAO_ACCOUNT, ZENTAO_PASSWORD, zentaoID);
+		MimeMessage msg = EmailConverter.emlToMimeMessage(eml);
+		if (zentaoID == null) {
+			String sessionIdUrl = ZENTAO_URL + SESSION_ID;
+			zentaoID = zentaoMethod.getZentaoID(sessionIdUrl);
+			
+			String loginUrl = ZENTAO_URL + LOGIN;
+			zentaoMethod.zentaoLogin(loginUrl, ACCOUNT, PASSWORD, zentaoID);
+		}
+		String createBugUrl = String.format(ZENTAO_URL + BUG_CREATE, productId);
+		zentaoMethod.createBug(createBugUrl, msg, zentaoID, productId, openedBuildId);
 		
-		String createBugUrl = ZENTAO_URL + ZENTAO_BUG_CREATE_PATH;
-		zentaoMethod.createBug(createBugUrl, message, zentaoID);
-		
-		String browseBugUrl = ZENTAO_URL + ZENTAO_BUG_BROWSE_PATH;
-		int bugID = zentaoMethod.getBugID(browseBugUrl, message.getSubject(), zentaoID);
+		String browseBugUrl = ZENTAO_URL + BUG_BROWSE;
+		int bugID = zentaoMethod.getBugID(browseBugUrl, msg.getSubject(), zentaoID);
 		
 		return bugID;
+	}
+	
+	public int updateBug(int bugId, String eml, String status) throws Exception {
+		
+		if (zentaoID == null) {
+			String sessionIdUrl = ZENTAO_URL + SESSION_ID;
+			zentaoID = zentaoMethod.getZentaoID(sessionIdUrl);
+			
+			String loginUrl = ZENTAO_URL + LOGIN;
+			zentaoMethod.zentaoLogin(loginUrl, ACCOUNT, PASSWORD, zentaoID);
+		}
+		String updateBugUrl = String.format(ZENTAO_URL + BUG_EDIT, bugId);
+		zentaoMethod.updateBug(updateBugUrl, eml, zentaoID, status);
+		
+		return 0;
+	}
+	
+	public JSONObject getBug(int bugId) throws Exception {
+		
+		if (zentaoID == null) {
+			String sessionIdUrl = ZENTAO_URL + SESSION_ID;
+			zentaoID = zentaoMethod.getZentaoID(sessionIdUrl);
+			
+			String loginUrl = ZENTAO_URL + LOGIN;
+			zentaoMethod.zentaoLogin(loginUrl, ACCOUNT, PASSWORD, zentaoID);
+		}
+		String getBugUrl = String.format(ZENTAO_URL + BUG_VIEW, bugId);
+		JSONObject object = zentaoMethod.getBug(getBugUrl, zentaoID);
+		
+		return object;
 	}
 }

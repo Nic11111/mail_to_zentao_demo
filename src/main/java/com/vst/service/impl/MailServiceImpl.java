@@ -31,7 +31,8 @@ public class MailServiceImpl implements MailService {
 	public int replyMail(Message message, String bugID) throws Exception {
 		
 		logger.info("call replyMail().");
-		return mailUtil.replyMail(message, bugID);
+//		return mailUtil.replyMail(message, bugID);
+		return 0;
 	}
 	
 }

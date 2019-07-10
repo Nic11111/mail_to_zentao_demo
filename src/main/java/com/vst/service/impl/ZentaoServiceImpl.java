@@ -22,7 +22,8 @@ public class ZentaoServiceImpl implements ZentaoService {
 	public int createBug(Message message) throws Exception {
 		
 		logger.info("call createBug().");
-		return zentaoUtil.createBug(message);
+//		return zentaoUtil.createBug(message);
+		return 0;
 	}
 
 }

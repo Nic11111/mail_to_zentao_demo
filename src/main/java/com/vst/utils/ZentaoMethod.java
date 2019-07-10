@@ -90,7 +90,7 @@ public class ZentaoMethod {
 	}
 	
 	
-	public int createBug(String createBugUrl, Message message, String zentaoID) {
+	public int createBug(String createBugUrl, Message message, String zentaoID, int productId, int openedBuildId) {
 		
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		try {
@@ -106,8 +106,8 @@ public class ZentaoMethod {
 			ParseMimeMessage parseMimeMessage = new ParseMimeMessage((MimeMessage)message);
 			parseMimeMessage.getMailContent((Part)message);
 			
-			String postBody = "product=" + 1 + "&module=" + 1 + "&title=" 
-					+ message.getSubject() + "&openedBuild=" + 1
+			String postBody = "product=" + productId + "&module=" + 1 + "&title=" 
+					+ message.getSubject() + "&openedBuild=" + openedBuildId
 					+ "&steps=" + parseMimeMessage.getBodyText();
 			StringEntity postEntity = new StringEntity(postBody, "UTF-8");
 			httpPost.setEntity(postEntity);
@@ -116,6 +116,47 @@ public class ZentaoMethod {
 			HttpEntity responseEntity = response.getEntity();
 			System.out.println(
 					"**************bug create response: \n" + EntityUtils.toString(responseEntity) + "\n**************");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				httpClient.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return 0;
+	}
+	
+	public int updateBug(String updateBugUrl, String eml, String zentaoID, String status) {
+		
+		CloseableHttpClient httpClient = HttpClients.createDefault();
+		try {
+			HttpPost httpPost = new HttpPost(updateBugUrl);
+
+			httpPost.setHeader("Accept", "application/json, text/javascript, */*; q=0.01");
+			httpPost.setHeader("Accept-Encoding", "gzip, deflate");
+			httpPost.setHeader("Accept-Language", "zh-CN,zh;q=0.9");
+			httpPost.setHeader("Content-Type", "application/x-www-form-urlencoded");
+			httpPost.setHeader("Cookie",
+					"ang=zh-cn; theme=default; windowWidth=1920; windowHeight=974; zentaosid=" + zentaoID);
+			
+//			ParseMimeMessage parseMimeMessage = new ParseMimeMessage((MimeMessage)message);
+//			parseMimeMessage.getMailContent((Part)message);
+//			
+//			String postBody = "product=" + productId + "&module=" + 1 + "&title=" 
+//					+ message.getSubject() + "&openedBuild=" + openedBuildId
+//					+ "&steps=" + parseMimeMessage.getBodyText();
+			String postBody = "";
+			
+			StringEntity postEntity = new StringEntity(postBody, "UTF-8");
+			httpPost.setEntity(postEntity);
+
+			CloseableHttpResponse response = httpClient.execute(httpPost);
+			HttpEntity responseEntity = response.getEntity();
+			System.out.println(
+					"**************bug edit response: \n" + EntityUtils.toString(responseEntity) + "\n**************");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -167,5 +208,40 @@ public class ZentaoMethod {
 			}
 		}
 		return 0;
+	}
+	
+	public JSONObject getBug(String getBugUrl, String zentaoID) {
+		CloseableHttpClient httpClient = HttpClients.createDefault();
+		try {
+			HttpGet httpGet = new HttpGet(getBugUrl);
+
+			httpGet.setHeader("Accept", "application/json, text/javascript, */*; q=0.01");
+			httpGet.setHeader("Accept-Encoding", "gzip, deflate");
+			httpGet.setHeader("Accept-Language", "zh-CN,zh;q=0.9");
+			httpGet.setHeader("Content-Type", "application/x-www-form-urlencoded");
+			httpGet.setHeader("Cookie",
+					"ang=zh-cn; theme=default; windowWidth=1920; windowHeight=974; zentaosid=" + zentaoID);
+
+			CloseableHttpResponse response = httpClient.execute(httpGet);
+			HttpEntity responseEntity = response.getEntity();
+			String responseEntityStr = EntityUtils.toString(responseEntity);
+			System.out.println(
+					"**************get bug response: \n" + responseEntityStr + "\n**************");
+			JSONObject jsonObject = JSONObject.fromObject(responseEntityStr);
+			JSONObject jsonObjectData = JSONObject.fromObject(jsonObject.get("data"));
+			JSONObject jsonObjectBug = JSONObject.fromObject(jsonObjectData.get("bug"));
+			
+			return jsonObjectBug;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				httpClient.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return null;
 	}
 }
