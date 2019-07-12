@@ -62,6 +62,7 @@ public class TimerTask {
 			
 			// receiveMail(title, eml, from, to, sentDate);
 		}
+		zentaoUtil.createBug(1, 1, "test 20190712", EmailConverter.mimeMessageToEML((MimeMessage)messagesReceive.get(0)), "disen.wen@victoria-tech.com", "714413099@qq.com");
 	}
 
 }

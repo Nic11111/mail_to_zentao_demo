@@ -206,8 +206,8 @@ public class ZentaoMethod {
 //				}
 //			}
 			JsonNode root = objectMapper.readTree(responseEntityStr);
-			JsonNode dataNode = root.get("data");
-			ArrayNode bugsArray = (ArrayNode)dataNode.get("bugs");
+			String dataNodeStr = root.get("data").asText();
+			ArrayNode bugsArray = (ArrayNode)objectMapper.readTree(dataNodeStr).get("bugs");
 			for (JsonNode bug : bugsArray) {
 				if (bug.get("status").asText().equals("active") 
 						&& bug.get("title").asText().equals(subject)) {
@@ -249,7 +249,9 @@ public class ZentaoMethod {
 //			JSONObject jsonObjectBug = JSONObject.fromObject(jsonObjectData.get("bug"));
 			
 			JsonNode root = objectMapper.readTree(responseEntityStr);
-			JsonNode bugNode = root.get("data").get("bug");
+			JsonNode dataNode = root.get("data");
+			String bugNodeStr = dataNode.get("bug").asText();
+			JsonNode bugNode = objectMapper.readTree(bugNodeStr);
 			
 			return bugNode;
 			

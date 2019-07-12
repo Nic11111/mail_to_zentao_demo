@@ -109,10 +109,11 @@ public class MailUtil {
 				logger.info("邮件作者：" + fromaddr);
 				logger.info("================================================\r\n");
 				Flags flags = msg.getFlags();
-				if (!flags.contains(Flags.Flag.SEEN)) {
-					messageList.add(msg);
-					msg.setFlag(Flag.SEEN, true);
-				}
+				messageList.add(msg);
+//				if (!flags.contains(Flags.Flag.SEEN)) {
+//					messageList.add(msg);
+//					msg.setFlag(Flag.SEEN, true);
+//				}
 			}
 			return messageList;
 			
