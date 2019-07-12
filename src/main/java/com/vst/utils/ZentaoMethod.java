@@ -13,13 +13,19 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+
 
 @Component
 public class ZentaoMethod {
+	
+	@Autowired
+	private ObjectMapper objectMapper;
 	
 	public String getZentaoID(String sessionIdUrl) {
 		
@@ -187,14 +193,25 @@ public class ZentaoMethod {
 			String responseEntityStr = EntityUtils.toString(responseEntity);
 			System.out.println(
 					"**************bug browse response: \n" + responseEntityStr + "\n**************");
-			JSONObject jsonObject = JSONObject.fromObject(responseEntityStr);
-			JSONObject jsonObject2 = JSONObject.fromObject(jsonObject.get("data"));
-			JSONArray jsonArray = JSONArray.fromObject(jsonObject2.get("bugs"));
-			Object[] array = jsonArray.toArray();
-			for (int index = 0; index < array.length; index++) {
-				JSONObject object = JSONObject.fromObject(array[index]);
-				if (object.get("status").equals("active") && object.get("title").equals(subject)) {
-					return Integer.valueOf(object.get("id").toString());
+			ObjectMapper objectMapper = new ObjectMapper();
+			
+//			JSONObject jsonObject = JSONObject.fromObject(responseEntityStr);
+//			JSONObject jsonObject2 = JSONObject.fromObject(jsonObject.get("data"));
+//			JSONArray jsonArray = JSONArray.fromObject(jsonObject2.get("bugs"));
+//			Object[] array = jsonArray.toArray();
+//			for (int index = 0; index < array.length; index++) {
+//				JSONObject object = JSONObject.fromObject(array[index]);
+//				if (object.get("status").equals("active") && object.get("title").equals(subject)) {
+//					return Integer.valueOf(object.get("id").toString());
+//				}
+//			}
+			JsonNode root = objectMapper.readTree(responseEntityStr);
+			JsonNode dataNode = root.get("data");
+			ArrayNode bugsArray = (ArrayNode)dataNode.get("bugs");
+			for (JsonNode bug : bugsArray) {
+				if (bug.get("status").asText().equals("active") 
+						&& bug.get("title").asText().equals(subject)) {
+					return Integer.valueOf(bug.get("id").asText());
 				}
 			}
 			
@@ -210,7 +227,7 @@ public class ZentaoMethod {
 		return 0;
 	}
 	
-	public JSONObject getBug(String getBugUrl, String zentaoID) {
+	public JsonNode getBug(String getBugUrl, String zentaoID) {
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		try {
 			HttpGet httpGet = new HttpGet(getBugUrl);
@@ -227,11 +244,14 @@ public class ZentaoMethod {
 			String responseEntityStr = EntityUtils.toString(responseEntity);
 			System.out.println(
 					"**************get bug response: \n" + responseEntityStr + "\n**************");
-			JSONObject jsonObject = JSONObject.fromObject(responseEntityStr);
-			JSONObject jsonObjectData = JSONObject.fromObject(jsonObject.get("data"));
-			JSONObject jsonObjectBug = JSONObject.fromObject(jsonObjectData.get("bug"));
+//			JSONObject jsonObject = JSONObject.fromObject(responseEntityStr);
+//			JSONObject jsonObjectData = JSONObject.fromObject(jsonObject.get("data"));
+//			JSONObject jsonObjectBug = JSONObject.fromObject(jsonObjectData.get("bug"));
 			
-			return jsonObjectBug;
+			JsonNode root = objectMapper.readTree(responseEntityStr);
+			JsonNode bugNode = root.get("data").get("bug");
+			
+			return bugNode;
 			
 		} catch (Exception e) {
 			e.printStackTrace();

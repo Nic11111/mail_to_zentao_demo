@@ -7,7 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import net.sf.json.JSONObject;
+import com.fasterxml.jackson.databind.JsonNode;
+
 
 @Component
 public class ZentaoUtil {
@@ -88,7 +89,7 @@ public class ZentaoUtil {
 		return 0;
 	}
 	
-	public JSONObject getBug(int bugId) throws Exception {
+	public JsonNode getBug(int bugId) throws Exception {
 		
 		if (zentaoID == null) {
 			String sessionIdUrl = ZENTAO_URL + SESSION_ID;
@@ -98,8 +99,8 @@ public class ZentaoUtil {
 			zentaoMethod.zentaoLogin(loginUrl, ACCOUNT, PASSWORD, zentaoID);
 		}
 		String getBugUrl = String.format(ZENTAO_URL + BUG_VIEW, bugId);
-		JSONObject object = zentaoMethod.getBug(getBugUrl, zentaoID);
+		JsonNode bug = zentaoMethod.getBug(getBugUrl, zentaoID);
 		
-		return object;
+		return bug;
 	}
 }
