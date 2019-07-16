@@ -55,7 +55,8 @@ public class ZentaoUtil {
 	private String zentaoID;
 	
 	
-	public int createBug(/*Message message*/int productId, int openedBuildId, String subject, String eml, String from, String to) throws Exception {
+	public int createBug(int productId, int openedBuildId, 
+			String subject, String eml, String fileName, String from, String to) throws Exception {
 		
 		MimeMessage msg = EmailConverter.emlToMimeMessage(eml);
 		if (zentaoID == null) {
@@ -66,7 +67,7 @@ public class ZentaoUtil {
 			zentaoMethod.zentaoLogin(loginUrl, ACCOUNT, PASSWORD, zentaoID);
 		}
 		String createBugUrl = String.format(ZENTAO_URL + BUG_CREATE, productId);
-		zentaoMethod.createBug(createBugUrl, msg, zentaoID, null, productId, openedBuildId);
+		zentaoMethod.createBug(createBugUrl, msg, zentaoID, eml, fileName, productId, openedBuildId);
 		
 		String browseBugUrl = ZENTAO_URL + BUG_BROWSE;
 		int bugID = zentaoMethod.getBugID(browseBugUrl, msg.getSubject(), zentaoID);

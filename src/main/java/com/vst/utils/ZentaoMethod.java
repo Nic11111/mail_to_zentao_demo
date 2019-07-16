@@ -1,10 +1,10 @@
 package com.vst.utils;
 
-import java.io.File;
 import java.nio.charset.Charset;
-import java.rmi.server.SocketSecurityException;
 
 import javax.mail.Message;
+import javax.mail.Part;
+import javax.mail.internet.MimeMessage;
 
 import org.apache.http.Consts;
 import org.apache.http.Header;
@@ -20,7 +20,6 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
-import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -108,13 +107,14 @@ public class ZentaoMethod {
 	}
 	
 	
-	public int createBug(String createBugUrl, Message message, String zentaoID, String filePath, int productId, int openedBuildId) {
+	public int createBug(String createBugUrl, Message message, String zentaoID, String eml, String fileName, int productId, int openedBuildId) {
 		
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
-			File uploadFile = new File("D:\\mail.cfg");
-			ContentType contentType = ContentType.create(ContentType.TEXT_PLAIN.getMimeType(), "UTF-8");
-			FileBody fileBody = new FileBody(uploadFile, contentType, "mail.cfg");
+			
+			ParseMimeMessage parseMimeMessage = new ParseMimeMessage((MimeMessage)message);
+			parseMimeMessage.getMailContent((Part)message);
+			
 			StringBody product = new StringBody(
 					String.valueOf(productId), ContentType.create("text/plain", Consts.UTF_8));
 			StringBody module = new StringBody(
@@ -123,12 +123,14 @@ public class ZentaoMethod {
 					message.getSubject(), ContentType.create("text/plain", Consts.UTF_8));
 			StringBody openedBuild = new StringBody(
 					String.valueOf(openedBuildId), ContentType.create("text/plain", Consts.UTF_8));
+			StringBody content = new StringBody(
+					parseMimeMessage.getBodyText(), ContentType.create("text/plain", Consts.UTF_8));
 			HttpEntity entity = MultipartEntityBuilder
 	                .create().setMode(HttpMultipartMode.BROWSER_COMPATIBLE)
 	                .setCharset(Charset.forName("utf-8"))
-	                .addPart("product", product).addPart("module", module)
-	                .addPart("title", title).addPart("openedBuild", openedBuild)
-	                .addPart("files", fileBody)
+	                .addPart("product", product).addPart("module", module).addPart("title", title)
+	                .addPart("steps", content).addPart("openedBuild", openedBuild)
+	                .addBinaryBody("files", eml.getBytes(Charset.forName("utf8")), ContentType.APPLICATION_OCTET_STREAM, fileName)
 	                .build();
 			
 			HttpUriRequest request = RequestBuilder
@@ -136,9 +138,6 @@ public class ZentaoMethod {
 			request.setHeader("Cookie",
 					"ang=zh-cn; theme=default; windowWidth=1920; windowHeight=974; zentaosid=" + zentaoID);
 			
-//			CloseableHttpResponse response = httpClient.execute(request);
-//			HttpEntity responseEntity = response.getEntity();
-
 			ResponseHandler<String> responseHandler = response -> {
                 int status = response.getStatusLine().getStatusCode();
                 if (status >= 200 && status < 300) {
