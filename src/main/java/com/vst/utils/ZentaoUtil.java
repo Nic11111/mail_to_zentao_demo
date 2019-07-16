@@ -66,7 +66,7 @@ public class ZentaoUtil {
 			zentaoMethod.zentaoLogin(loginUrl, ACCOUNT, PASSWORD, zentaoID);
 		}
 		String createBugUrl = String.format(ZENTAO_URL + BUG_CREATE, productId);
-		zentaoMethod.createBug(createBugUrl, msg, zentaoID, productId, openedBuildId);
+		zentaoMethod.createBug(createBugUrl, msg, zentaoID, null, productId, openedBuildId);
 		
 		String browseBugUrl = ZENTAO_URL + BUG_BROWSE;
 		int bugID = zentaoMethod.getBugID(browseBugUrl, msg.getSubject(), zentaoID);

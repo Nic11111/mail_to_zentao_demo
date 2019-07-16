@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.vst.service.ZentaoService;
 import com.vst.utils.ZentaoUtil;
 
-@Service
+//@Service
 public class ZentaoServiceImpl implements ZentaoService {
 
 	private static final Logger logger = LoggerFactory.getLogger(ZentaoServiceImpl.class);

@@ -27,8 +27,8 @@ public class MailUtil {
 	
 	private static final Logger logger = LoggerFactory.getLogger(MailUtil.class);
 
-	@Value("${mail.pop_server}")
-	private String POP_SERVER;
+//	@Value("${mail.pop_server}")
+//	private String POP_SERVER;
 	
 	@Value("${mail.smtp_server}")
 	private String SMTP_SERVER;
@@ -39,8 +39,8 @@ public class MailUtil {
 	@Value("${mail.imap_server}")
 	private String IMAP_SERVER;
 	
-	@Value("${mail.pop_password}")
-	private String POP_PASSWORD;
+//	@Value("${mail.pop_password}")
+//	private String POP_PASSWORD;
 	
 	@Value("${mail.imap_password}")
 	private String IMAP_PASSWORD;
@@ -48,8 +48,8 @@ public class MailUtil {
 	@Value("${mail.imap_port}")
 	private int IMAP_PORT;
 	
-	@Value("${mail.pop_port}")
-	private int POP_PORT;
+//	@Value("${mail.pop_port}")
+//	private int POP_PORT;
 	
 	@Value("${mail.smtp_port}")
 	private int SMTP_PORT;

@@ -13,7 +13,7 @@ import com.vst.pojo.EmailToZentao;
 import com.vst.service.PersistenceService;
 import com.vst.utils.ParseMimeMessage;
 
-@Service
+//@Service
 public class PersistenceServiceImpl implements PersistenceService {
 
 	@Autowired

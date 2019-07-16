@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import com.vst.service.MailService;
 import com.vst.utils.MailUtil;
 
-@Service
+//@Service
 public class MailServiceImpl implements MailService {
 
 	private static final Logger logger = LoggerFactory.getLogger(MailServiceImpl.class);
