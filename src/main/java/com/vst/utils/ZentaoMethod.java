@@ -2,19 +2,23 @@ package com.vst.utils;
 
 import java.io.File;
 import java.nio.charset.Charset;
+import java.rmi.server.SocketSecurityException;
 
 import javax.mail.Message;
-import javax.mail.Part;
-import javax.mail.internet.MimeMessage;
 
 import org.apache.http.Consts;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpUriRequest;
+import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
+import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.entity.mime.content.StringBody;
@@ -107,41 +111,7 @@ public class ZentaoMethod {
 	public int createBug(String createBugUrl, Message message, String zentaoID, String filePath, int productId, int openedBuildId) {
 		
 		CloseableHttpClient httpClient = HttpClients.createDefault();
-		try {
-//			HttpPost httpPost = new HttpPost(createBugUrl);
-//
-//			httpPost.setHeader("Accept", "application/json, text/javascript, */*; q=0.01");
-//			httpPost.setHeader("Accept-Encoding", "gzip, deflate");
-//			httpPost.setHeader("Accept-Language", "zh-CN,zh;q=0.9");
-//			httpPost.setHeader("Content-Type", "multipart/form-data;");
-//			httpPost.setHeader("Cookie",
-//					"ang=zh-cn; theme=default; windowWidth=1920; windowHeight=974; zentaosid=" + zentaoID);
-//			
-//			ParseMimeMessage parseMimeMessage = new ParseMimeMessage((MimeMessage)message);
-//			parseMimeMessage.getMailContent((Part)message);
-//			
-//			String postBody = "product=" + productId + "&module=" + 1 + "&title=" 
-//					+ message.getSubject() + "&openedBuild=" + openedBuildId
-//					+ "&steps=" + parseMimeMessage.getBodyText();
-//			StringBody product = new StringBody(
-//					String.valueOf(productId), ContentType.create("text/plain", Consts.UTF_8));
-//			StringBody module = new StringBody(
-//					String.valueOf(1), ContentType.create("text/plain", Consts.UTF_8));
-//			StringBody title = new StringBody(
-//					message.getSubject(), ContentType.create("text/plain", Consts.UTF_8));
-//			StringBody openedBuild = new StringBody(
-//					String.valueOf(openedBuildId), ContentType.create("text/plain", Consts.UTF_8));
-//			StringBody filename = new StringBody(
-//					"mail.cfg", ContentType.create("text/plain", Consts.UTF_8));
-//			FileBody file = new FileBody(new File("D:\\mail.cfg"));
-//			HttpEntity entity = MultipartEntityBuilder
-//	                .create()
-//	                .setCharset(Charset.forName("utf-8"))
-//	                .addPart("product", product).addPart("module", module)
-//	                .addPart("title", title).addPart("openedBuild", openedBuild)
-//	                .addPart("file", file).addPart("filename", filename)
-//	                .build();
-//			httpPost.setEntity(entity);
+		try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
 			File uploadFile = new File("D:\\mail.cfg");
 			ContentType contentType = ContentType.create(ContentType.TEXT_PLAIN.getMimeType(), "UTF-8");
 			FileBody fileBody = new FileBody(uploadFile, contentType, "mail.cfg");
@@ -154,25 +124,33 @@ public class ZentaoMethod {
 			StringBody openedBuild = new StringBody(
 					String.valueOf(openedBuildId), ContentType.create("text/plain", Consts.UTF_8));
 			HttpEntity entity = MultipartEntityBuilder
-	                .create()
+	                .create().setMode(HttpMultipartMode.BROWSER_COMPATIBLE)
 	                .setCharset(Charset.forName("utf-8"))
 	                .addPart("product", product).addPart("module", module)
 	                .addPart("title", title).addPart("openedBuild", openedBuild)
-	                .addPart("files", fileBody).setBoundary("---------------------------quifh29hpofawlwhf")
+	                .addPart("files", fileBody)
 	                .build();
 			
-			HttpPost httpPost = new HttpPost(createBugUrl);
-			httpPost.setHeader("Accept", "application/json, text/javascript, */*; q=0.01");
-			httpPost.setHeader("Accept-Encoding", "gzip, deflate");
-			httpPost.setHeader("Accept-Language", "zh-CN,zh;q=0.9");
-			httpPost.setHeader("Content-Type", "multipart/form-data;boundary=---------------------------quifh29hpofawlwhf");
-			httpPost.setHeader("Cookie",
+			HttpUriRequest request = RequestBuilder
+					.post(createBugUrl).setEntity(entity).build();
+			request.setHeader("Cookie",
 					"ang=zh-cn; theme=default; windowWidth=1920; windowHeight=974; zentaosid=" + zentaoID);
-			httpPost.setEntity(entity);
-			CloseableHttpResponse response = httpClient.execute(httpPost);
-			HttpEntity responseEntity = response.getEntity();
+			
+//			CloseableHttpResponse response = httpClient.execute(request);
+//			HttpEntity responseEntity = response.getEntity();
+
+			ResponseHandler<String> responseHandler = response -> {
+                int status = response.getStatusLine().getStatusCode();
+                if (status >= 200 && status < 300) {
+                    HttpEntity responseEntity = response.getEntity();
+                    return responseEntity != null ? EntityUtils.toString(responseEntity) : null;
+                } else {
+                    throw new ClientProtocolException("Unexpected response status: " + status);
+                }
+            };
+            String responseBody = httpclient.execute(request, responseHandler);
 			System.out.println(
-					"**************bug create response: \n" + EntityUtils.toString(responseEntity) + "\n**************");
+					"**************bug create response: \n" + responseBody + "\n**************");
 
 		} catch (Exception e) {
 			e.printStackTrace();
