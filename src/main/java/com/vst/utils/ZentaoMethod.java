@@ -24,6 +24,8 @@ import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -34,36 +36,41 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 
 @Component
 public class ZentaoMethod {
+
+	private static final Logger logger = LoggerFactory.getLogger(ZentaoMethod.class);
 	
 	@Autowired
 	private ObjectMapper objectMapper;
 	
 	public String getZentaoID(String sessionIdUrl) {
 		
-		CloseableHttpClient httpClient = HttpClients.createDefault();
-		try {
+		try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
 			HttpGet httpGet = new HttpGet(sessionIdUrl);
 			httpGet.setHeader("Accept",
 					"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8");
 			httpGet.setHeader("Accept-Encoding", "gzip, deflate");
 			httpGet.setHeader("Accept-Language", "zh-CN,zh;q=0.9");
-			CloseableHttpResponse response = httpClient.execute(httpGet);
 
-			Header[] headers = response.getAllHeaders();
-			for (Header header : headers) {
-				String tempStr = header.getValue();
-				if (tempStr.contains("zentaosid")) {
-					return tempStr.split(";")[0].split("=")[1];
-				}
-			}
+			ResponseHandler<String> responseHandler = response -> {
+                int status = response.getStatusLine().getStatusCode();
+                if (status >= 200 && status < 300) {
+                	Header[] headers = response.getAllHeaders();
+        			for (Header header : headers) {
+        				String tempStr = header.getValue();
+        				if (tempStr.contains("zentaosid")) {
+        					return tempStr.split(";")[0].split("=")[1];
+        				}
+        			}
+                } else {
+                    throw new ClientProtocolException("Unexpected response status: " + status);
+                }
+                return null;
+            };
+            String responseBody = httpClient.execute(httpGet, responseHandler);
+            logger.info("**************getZentaoID response: \n" + responseBody + "\n**************");
+            return responseBody;
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			try {
-				httpClient.close();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
 		}
 		return "";
 	}
@@ -75,8 +82,7 @@ public class ZentaoMethod {
 			throw new Exception("请检查禅道登录参数");
 		}
 
-		CloseableHttpClient httpClient = HttpClients.createDefault();
-		try {
+		try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
 			HttpPost httpPost = new HttpPost(loginUrl);
 
 			httpPost.setHeader("Accept", "application/json, text/javascript, */*; q=0.01");
@@ -90,27 +96,27 @@ public class ZentaoMethod {
 			StringEntity postEntity = new StringEntity(postBody, "UTF-8");
 			httpPost.setEntity(postEntity);
 
-			CloseableHttpResponse response = httpClient.execute(httpPost);
-			HttpEntity responseEntity = response.getEntity();
-			System.out.println(
-					"**************login response: \n" + EntityUtils.toString(responseEntity) + "\n**************");
+			ResponseHandler<String> responseHandler = response -> {
+                int status = response.getStatusLine().getStatusCode();
+                if (status >= 200 && status < 300) {
+                    HttpEntity responseEntity = response.getEntity();
+                    return responseEntity != null ? EntityUtils.toString(responseEntity) : null;
+                } else {
+                    throw new ClientProtocolException("Unexpected response status: " + status);
+                }
+            };
+            String responseBody = httpClient.execute(httpPost, responseHandler);
+			logger.info("**************login response: \n" + responseBody + "\n**************");
 
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			try {
-				httpClient.close();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
 		}
 	}
 	
 	
 	public int createBug(String createBugUrl, Message message, String zentaoID, String eml, String fileName, int productId, int openedBuildId) {
 		
-		CloseableHttpClient httpClient = HttpClients.createDefault();
-		try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
+		try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
 			
 			ParseMimeMessage parseMimeMessage = new ParseMimeMessage((MimeMessage)message);
 			parseMimeMessage.getMailContent((Part)message);
@@ -147,94 +153,74 @@ public class ZentaoMethod {
                     throw new ClientProtocolException("Unexpected response status: " + status);
                 }
             };
-            String responseBody = httpclient.execute(request, responseHandler);
-			System.out.println(
-					"**************bug create response: \n" + responseBody + "\n**************");
-
+            String responseBody = httpClient.execute(request, responseHandler);
+			logger.info("**************bug create response: \n" + responseBody + "\n**************");
+			return 1;
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			try {
-				httpClient.close();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
 		}
 		return 0;
 	}
 	
-	public int updateBug(String updateBugUrl, String eml, String zentaoID, String status) {
+	public int updateBug(String updateBugUrl, String eml, String fileName, String status, String zentaoID) {
 		
-		CloseableHttpClient httpClient = HttpClients.createDefault();
-		try {
+		try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+			StringBody zentaoStatus = new StringBody(
+					status, ContentType.create("text/plain", Consts.UTF_8));
+			HttpEntity entity = MultipartEntityBuilder
+	                .create().setMode(HttpMultipartMode.BROWSER_COMPATIBLE)
+	                .setCharset(Charset.forName("utf-8"))
+	                .addPart("status", zentaoStatus)
+	                .addBinaryBody("files", eml.getBytes(Charset.forName("utf8")), ContentType.APPLICATION_OCTET_STREAM, fileName)
+	                .build();
 			HttpPost httpPost = new HttpPost(updateBugUrl);
-
-			httpPost.setHeader("Accept", "application/json, text/javascript, */*; q=0.01");
-			httpPost.setHeader("Accept-Encoding", "gzip, deflate");
-			httpPost.setHeader("Accept-Language", "zh-CN,zh;q=0.9");
-//			httpPost.setHeader("Content-Type", "application/x-www-form-urlencoded");
-			httpPost.setHeader("Content-Type", "multipart/form-data;");
+			httpPost.setEntity(entity);
 			httpPost.setHeader("Cookie",
 					"ang=zh-cn; theme=default; windowWidth=1920; windowHeight=974; zentaosid=" + zentaoID);
-			
-//			ParseMimeMessage parseMimeMessage = new ParseMimeMessage((MimeMessage)message);
-//			parseMimeMessage.getMailContent((Part)message);
-//			
-//			String postBody = "product=" + productId + "&module=" + 1 + "&title=" 
-//					+ message.getSubject() + "&openedBuild=" + openedBuildId
-//					+ "&steps=" + parseMimeMessage.getBodyText();
-			String postBody = "";
-			
-			StringEntity postEntity = new StringEntity(postBody, "UTF-8");
-			httpPost.setEntity(postEntity);
 
-			CloseableHttpResponse response = httpClient.execute(httpPost);
-			HttpEntity responseEntity = response.getEntity();
-			System.out.println(
-					"**************bug edit response: \n" + EntityUtils.toString(responseEntity) + "\n**************");
-
+			ResponseHandler<String> responseHandler = response -> {
+                int reponseStatus = response.getStatusLine().getStatusCode();
+                if (reponseStatus >= 200 && reponseStatus < 300) {
+                    HttpEntity responseEntity = response.getEntity();
+                    return responseEntity != null ? EntityUtils.toString(responseEntity) : null;
+                } else {
+                    throw new ClientProtocolException("Unexpected response status: " + status);
+                }
+            };
+            String responseBody = httpClient.execute(httpPost, responseHandler);
+            logger.info("**************bug edit response: \n" + responseBody + "\n**************");
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			try {
-				httpClient.close();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
 		}
 		return 0;
 	}
 	
 	public int getBugID(String browseBugUrl, String subject, String zentaoID) {
-		CloseableHttpClient httpClient = HttpClients.createDefault();
-		try {
+		
+		try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
 			HttpGet httpGet = new HttpGet(browseBugUrl);
 
-			httpGet.setHeader("Accept", "application/json, text/javascript, */*; q=0.01");
-			httpGet.setHeader("Accept-Encoding", "gzip, deflate");
-			httpGet.setHeader("Accept-Language", "zh-CN,zh;q=0.9");
-			httpGet.setHeader("Content-Type", "application/x-www-form-urlencoded");
 			httpGet.setHeader("Cookie",
 					"ang=zh-cn; theme=default; windowWidth=1920; windowHeight=974; zentaosid=" + zentaoID);
 
-			CloseableHttpResponse response = httpClient.execute(httpGet);
-			HttpEntity responseEntity = response.getEntity();
-			String responseEntityStr = EntityUtils.toString(responseEntity);
-			System.out.println(
-					"**************bug browse response: \n" + responseEntityStr + "\n**************");
-			ObjectMapper objectMapper = new ObjectMapper();
+//			CloseableHttpResponse response = httpClient.execute(httpGet);
+//			HttpEntity responseEntity = response.getEntity();
+//			String responseEntityStr = EntityUtils.toString(responseEntity);
 			
-//			JSONObject jsonObject = JSONObject.fromObject(responseEntityStr);
-//			JSONObject jsonObject2 = JSONObject.fromObject(jsonObject.get("data"));
-//			JSONArray jsonArray = JSONArray.fromObject(jsonObject2.get("bugs"));
-//			Object[] array = jsonArray.toArray();
-//			for (int index = 0; index < array.length; index++) {
-//				JSONObject object = JSONObject.fromObject(array[index]);
-//				if (object.get("status").equals("active") && object.get("title").equals(subject)) {
-//					return Integer.valueOf(object.get("id").toString());
-//				}
-//			}
-			JsonNode root = objectMapper.readTree(responseEntityStr);
+			ResponseHandler<String> responseHandler = response -> {
+                int status = response.getStatusLine().getStatusCode();
+                if (status >= 200 && status < 300) {
+                    HttpEntity responseEntity = response.getEntity();
+                    return responseEntity != null ? EntityUtils.toString(responseEntity) : null;
+                } else {
+                    throw new ClientProtocolException("Unexpected response status: " + status);
+                }
+            };
+            String responseBody = httpClient.execute(httpGet, responseHandler);
+            logger.info("**************bug browse response: \n" + responseBody + "\n**************");
+            ObjectMapper objectMapper = new ObjectMapper();
+			
+			JsonNode root = objectMapper.readTree(responseBody);
 			String dataNodeStr = root.get("data").asText();
 			ArrayNode bugsArray = (ArrayNode)objectMapper.readTree(dataNodeStr).get("bugs");
 			for (JsonNode bug : bugsArray) {
@@ -246,19 +232,13 @@ public class ZentaoMethod {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			try {
-				httpClient.close();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
 		}
 		return 0;
 	}
 	
 	public JsonNode getBug(String getBugUrl, String zentaoID) {
-		CloseableHttpClient httpClient = HttpClients.createDefault();
-		try {
+
+		try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
 			HttpGet httpGet = new HttpGet(getBugUrl);
 
 			httpGet.setHeader("Accept", "application/json, text/javascript, */*; q=0.01");
@@ -271,11 +251,7 @@ public class ZentaoMethod {
 			CloseableHttpResponse response = httpClient.execute(httpGet);
 			HttpEntity responseEntity = response.getEntity();
 			String responseEntityStr = EntityUtils.toString(responseEntity);
-			System.out.println(
-					"**************get bug response: \n" + responseEntityStr + "\n**************");
-//			JSONObject jsonObject = JSONObject.fromObject(responseEntityStr);
-//			JSONObject jsonObjectData = JSONObject.fromObject(jsonObject.get("data"));
-//			JSONObject jsonObjectBug = JSONObject.fromObject(jsonObjectData.get("bug"));
+			logger.info("**************get bug response: \n" + responseEntityStr + "\n**************");
 			
 			JsonNode root = objectMapper.readTree(responseEntityStr);
 			JsonNode dataNode = root.get("data");
@@ -286,12 +262,6 @@ public class ZentaoMethod {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			try {
-				httpClient.close();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
 		}
 		return null;
 	}

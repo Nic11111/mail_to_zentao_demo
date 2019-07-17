@@ -75,7 +75,7 @@ public class ZentaoUtil {
 		return bugID;
 	}
 	
-	public int updateBug(int bugId, String eml, String status) throws Exception {
+	public int updateBug(int bugId, String eml, String fileName, String status) throws Exception {
 		
 		if (zentaoID == null) {
 			String sessionIdUrl = ZENTAO_URL + SESSION_ID;
@@ -85,7 +85,7 @@ public class ZentaoUtil {
 			zentaoMethod.zentaoLogin(loginUrl, ACCOUNT, PASSWORD, zentaoID);
 		}
 		String updateBugUrl = String.format(ZENTAO_URL + BUG_EDIT, bugId);
-		zentaoMethod.updateBug(updateBugUrl, eml, zentaoID, status);
+		zentaoMethod.updateBug(updateBugUrl, eml, fileName, status, zentaoID);
 		
 		return 0;
 	}

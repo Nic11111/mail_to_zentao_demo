@@ -4,12 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-import javax.mail.Flags;
 import javax.mail.Folder;
 import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.Store;
-import javax.mail.Flags.Flag;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
@@ -108,7 +106,7 @@ public class MailUtil {
 				String fromaddr = personal + "<" + from + ">";
 				logger.info("邮件作者：" + fromaddr);
 				logger.info("================================================\r\n");
-				Flags flags = msg.getFlags();
+//				Flags flags = msg.getFlags();
 				messageList.add(msg);
 //				if (!flags.contains(Flags.Flag.SEEN)) {
 //					messageList.add(msg);

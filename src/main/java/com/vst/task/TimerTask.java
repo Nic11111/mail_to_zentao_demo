@@ -1,12 +1,9 @@
 package com.vst.task;
 
-import java.util.Date;
 import java.util.List;
 
 import javax.mail.Message;
-import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMessage.RecipientType;
 
 import org.simplejavamail.converter.EmailConverter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,17 +48,17 @@ public class TimerTask {
 		
 		List<Message> messagesReceive = mailUtil.getMail();
 		
-		for (Message msg : messagesReceive) {
-			String title = msg.getSubject();
-			String eml = EmailConverter.mimeMessageToEML((MimeMessage)msg);
-			InternetAddress[] fromAddress = (InternetAddress[]) msg.getFrom();
-			String from = fromAddress[0].getAddress();
-			InternetAddress[] toAddress = (InternetAddress[]) msg.getRecipients(RecipientType.TO);
-			String to = toAddress[0].getAddress();
-			Date sentDate = msg.getSentDate();
-			
-			// receiveMail(title, eml, from, to, sentDate);
-		}
+//		for (Message msg : messagesReceive) {
+//			String title = msg.getSubject();
+//			String eml = EmailConverter.mimeMessageToEML((MimeMessage)msg);
+//			InternetAddress[] fromAddress = (InternetAddress[]) msg.getFrom();
+//			String from = fromAddress[0].getAddress();
+//			InternetAddress[] toAddress = (InternetAddress[]) msg.getRecipients(RecipientType.TO);
+//			String to = toAddress[0].getAddress();
+//			Date sentDate = msg.getSentDate();
+//			
+//			receiveMail(title, eml, from, to, sentDate);
+//		}
 		zentaoUtil.createBug(1, 1, "test 20190712", EmailConverter.mimeMessageToEML((MimeMessage)messagesReceive.get(0)), "fileName", "disen.wen@victoria-tech.com", "714413099@qq.com");
 	}
 
